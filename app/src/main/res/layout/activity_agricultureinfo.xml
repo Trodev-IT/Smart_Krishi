@@ -77,7 +77,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="ফল-মূল চাষ"
+                            android:text="ফল-মূল\nচাষ"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
@@ -125,7 +125,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="আলু চাষাবাদ"
+                                android:text="আলু\nচাষাবাদ"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -175,7 +175,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="ধান বিষয়ক তথ্য"
+                                android:text="ধান বিষয়ক\nতথ্য"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -225,7 +225,7 @@
                         </com.google.android.material.card.MaterialCardView>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
@@ -268,11 +268,11 @@
                         </com.google.android.material.card.MaterialCardView>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="শাক-সবজি চাষ"
+                            android:text="শাক-সবজি\nচাষ"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
