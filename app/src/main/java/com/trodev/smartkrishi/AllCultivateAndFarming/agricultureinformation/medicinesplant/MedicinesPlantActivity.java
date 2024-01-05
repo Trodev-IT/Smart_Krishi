@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.flowers;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.medicinesplant;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class FlowersActivity extends AppCompatActivity {
+public class MedicinesPlantActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class FlowersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flowers);
+        setContentView(R.layout.activity_medicines_plant);
 
-        getSupportActionBar().setTitle("ফুল চাষ");
+        getSupportActionBar().setTitle("ঔষধি গাছ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

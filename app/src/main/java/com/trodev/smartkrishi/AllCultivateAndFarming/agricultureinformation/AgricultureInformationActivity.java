@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -6,22 +6,21 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.combined.CombinedCultivationActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.deases.DeasesActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fertilizer.FertilizerActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.flowers.FlowersActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fruits.FruitsActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.likely.LikelyActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.medicinesplant.MedicinesPlantActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.potato.PotatoActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.rice.RiceActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.roof.RoofActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.vegitable.VegitableActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.combined.CombinedCultivationActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.disease.DiseaseActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fertilizer.FertilizerActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.flowers.FlowersActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.likely.LikelyActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.medicinesplant.MedicinesPlantActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.potato.PotatoActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.rice.RiceActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.roof.RoofActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity;
 import com.trodev.smartkrishi.R;
 
-public class AgricultureinfoActivity extends AppCompatActivity {
+public class AgricultureInformationActivity extends AppCompatActivity {
 
     CardView fruits, potato, rice, roof, vegitable, deases, medicinesplant, flower, combined, likely, fertilizer;
 
@@ -81,7 +80,7 @@ public class AgricultureinfoActivity extends AppCompatActivity {
         deases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), DeasesActivity.class));
+                startActivity(new Intent(getApplicationContext(), DiseaseActivity.class));
             }
         });
         medicinesplant.setOnClickListener(new View.OnClickListener() {

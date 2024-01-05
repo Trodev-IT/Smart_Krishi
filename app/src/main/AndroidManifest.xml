@@ -74,49 +74,49 @@
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.fish.FishActivity"/>
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.vegitable.VegitableActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.roof.RoofActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.roof.RoofActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.rice.RiceActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.rice.RiceActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.potato.PotatoActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.potato.PotatoActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.medicinesplant.MedicinesPlantActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.medicinesplant.MedicinesPlantActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.likely.LikelyActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.likely.LikelyActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.flowers.FlowersActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.flowers.FlowersActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.fertilizer.FertilizerActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.fertilizer.FertilizerActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.deases.DeasesActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.disease.DiseaseActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.combined.CombinedCultivationActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.combined.CombinedCultivationActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity" />
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.fruits.FruitsActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity"/>
         <activity
             android:name=".AnotherCultivateFarming.agriculturetechnology.AgricultureTechnologyActivity"
             android:exported="true"
@@ -157,7 +157,7 @@
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
         <activity

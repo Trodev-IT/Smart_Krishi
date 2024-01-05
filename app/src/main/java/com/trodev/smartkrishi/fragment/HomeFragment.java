@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.database.DatabaseReference;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.AgricultureinfoActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.cow.CowActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.fish.FishActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.hen.HenActivity;
@@ -23,8 +23,6 @@ import com.trodev.smartkrishi.AnotherCultivateFarming.environment.EnvironmentAct
 import com.trodev.smartkrishi.AnotherCultivateFarming.health.HealthActivity;
 import com.trodev.smartkrishi.AnotherCultivateFarming.success.SuccessActivity;
 import com.trodev.smartkrishi.R;
-
-import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
@@ -61,7 +59,7 @@ public class HomeFragment extends Fragment {
         farmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), AgricultureinfoActivity.class));
+                startActivity(new Intent(getContext(), AgricultureInformationActivity.class));
             }
         });
         fish.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fertilizer;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.flowers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class FertilizerActivity extends AppCompatActivity {
+public class FlowersActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class FertilizerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fertilizer);
+        setContentView(R.layout.activity_flowers);
 
-        getSupportActionBar().setTitle("সার বিষয়ক তথ্য");
+        getSupportActionBar().setTitle("ফুল চাষ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

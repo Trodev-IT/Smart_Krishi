@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.vegitable;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.disease;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class VegitableActivity extends AppCompatActivity {
+public class DiseaseActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class VegitableActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vegitable);
+        setContentView(R.layout.activity_deases);
 
-        getSupportActionBar().setTitle("শাক-সবজি চাষ");
+        getSupportActionBar().setTitle("রোগ বালাই ও প্রতিকার");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

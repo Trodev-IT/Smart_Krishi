@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllCultivateAndFarming.agricultureinfo.rice.RiceActivity">
+    tools:context=".AllCultivateAndFarming.agricultureinformation.rice.RiceActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        tools:listitem="@layout/list" />
+        tools:listitem="@layout/listagricultureinformation" />
 
     <ProgressBar
         android:id="@+id/progressBar"

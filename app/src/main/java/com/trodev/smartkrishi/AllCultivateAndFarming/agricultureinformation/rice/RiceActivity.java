@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.deases;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.rice;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class DeasesActivity extends AppCompatActivity {
+public class RiceActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class DeasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deases);
+        setContentView(R.layout.activity_rice);
 
-        getSupportActionBar().setTitle("রোগ বালাই ও প্রতিকার");
+        getSupportActionBar().setTitle("ধান বিষয়ক তথ্য");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

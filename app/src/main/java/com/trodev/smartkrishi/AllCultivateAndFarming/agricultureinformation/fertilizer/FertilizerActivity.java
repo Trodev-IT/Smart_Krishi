@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.potato;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fertilizer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,16 +9,17 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class PotatoActivity extends AppCompatActivity {
+public class FertilizerActivity extends AppCompatActivity {
+
     RecyclerView recyclerView;
     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_potato);
+        setContentView(R.layout.activity_fertilizer);
 
-        getSupportActionBar().setTitle("আলু চাষাবাদ");
+        getSupportActionBar().setTitle("সার বিষয়ক তথ্য");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

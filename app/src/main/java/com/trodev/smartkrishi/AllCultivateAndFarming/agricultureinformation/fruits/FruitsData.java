@@ -1,13 +1,13 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fruits;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fruits;
 
-public class AgricultureData {
+public class FruitsData {
 
     String name, pdf, image, key;
 
-    public AgricultureData() {
+    public FruitsData() {
     }
 
-    public AgricultureData(String name, String pdf, String image, String key) {
+    public FruitsData(String name, String pdf, String image, String key) {
         this.name = name;
         this.pdf = pdf;
         this.image = image;
