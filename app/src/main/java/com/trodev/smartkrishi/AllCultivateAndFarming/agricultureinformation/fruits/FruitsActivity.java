@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fruits;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fruits;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +24,8 @@ public class FruitsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ProgressBar progressBar;
     DatabaseReference reference, dbRef;
-    ArrayList<AgricultureData> list;
-    AgricultureAdapter adapter;
+    ArrayList<FruitsData> listagricultureinformation;
+    FruitsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class FruitsActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
 
-        reference = FirebaseDatabase.getInstance().getReference().child("agriculture_info");
+        reference = FirebaseDatabase.getInstance().getReference().child("AgricultureInformation");
 
         showData();
     }
@@ -50,19 +50,19 @@ public class FruitsActivity extends AppCompatActivity {
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                list = new ArrayList<>();
+                listagricultureinformation = new ArrayList<>();
                 if (!dataSnapshot.exists()) {
                     recyclerView.setVisibility(View.GONE); // change
                 } else {
                     recyclerView.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        AgricultureData data = snapshot.getValue(AgricultureData.class);
-                        list.add(data);
+                        FruitsData data = snapshot.getValue(FruitsData.class);
+                        listagricultureinformation.add(data);
                     }
                     recyclerView.setHasFixedSize(true);
                     recyclerView.setLayoutManager(new LinearLayoutManager(FruitsActivity.this));
-                    adapter = new AgricultureAdapter(FruitsActivity.this, list, "ফল-মূল চাষ");
+                    adapter = new FruitsAdapter(FruitsActivity.this, listagricultureinformation, "ফল-মূল চাষ");
                     recyclerView.setAdapter(adapter);
                     progressBar.setVisibility(View.INVISIBLE);
                 }

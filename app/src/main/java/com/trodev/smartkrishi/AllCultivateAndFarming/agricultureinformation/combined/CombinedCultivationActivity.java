@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.likely;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.combined;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class LikelyActivity extends AppCompatActivity {
+public class CombinedCultivationActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class LikelyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_likely);
+        setContentView(R.layout.activity_combined_cultivation);
 
-        getSupportActionBar().setTitle("সম্ভাবনাময় ও অন্যান্য চাষ");
+        getSupportActionBar().setTitle("সমন্বিত চাষ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinfo.fruits;
+package com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,31 +15,30 @@ import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class AgricultureAdapter extends RecyclerView.Adapter<AgricultureAdapter.MyViewHolder> {
+public class CowAdapter extends RecyclerView.Adapter<com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder> {
 
     public Context context;
-    public ArrayList<AgricultureData> list;
+    public ArrayList<CowData> listanimal;
     public String Category;
 
-    public AgricultureAdapter(Context context, ArrayList<AgricultureData> list, String category) {
+    public CowAdapter(Context context, ArrayList<CowData> list, String category) {
         this.context = context;
-        this.list = list;
+        this.listanimal = list;
         Category = category;
     }
 
     @NonNull
     @Override
-    public AgricultureAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.list, parent, false);
-        return new MyViewHolder(view);
+        View view = LayoutInflater.from(context).inflate(R.layout.listanimal, parent, false);
+        return new com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AgricultureAdapter.MyViewHolder holder, int position) {
-
-        AgricultureData models = list.get(position);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        CowData models = listanimal.get(position);
 
         holder.nameTv.setText(models.getName());
         try {
@@ -47,12 +46,11 @@ public class AgricultureAdapter extends RecyclerView.Adapter<AgricultureAdapter.
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return listanimal.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
