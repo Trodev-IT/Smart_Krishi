@@ -21,9 +21,9 @@ public class CowAdapter extends RecyclerView.Adapter<com.trodev.smartkrishi.AllC
     public ArrayList<CowData> listanimal;
     public String Category;
 
-    public CowAdapter(Context context, ArrayList<CowData> list, String category) {
+    public CowAdapter(Context context, ArrayList<CowData> listanimal, String category) {
         this.context = context;
-        this.listanimal = list;
+        this.listanimal = listanimal;
         Category = category;
     }
 

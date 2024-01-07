@@ -18,12 +18,12 @@ import java.util.ArrayList;
 public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHolder> {
 
     public Context context;
-    public ArrayList<FruitsData> list;
+    public ArrayList<FruitsData> listagricultureinformation;
     public String Category;
 
-    public FruitsAdapter(Context context, ArrayList<FruitsData> list, String category) {
+    public FruitsAdapter(Context context, ArrayList<FruitsData> listagricultureinformation, String category) {
         this.context = context;
-        this.list = list;
+        this.listagricultureinformation = listagricultureinformation;
         Category = category;
     }
 
@@ -39,7 +39,7 @@ public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull FruitsAdapter.MyViewHolder holder, int position) {
 
-        FruitsData models = list.get(position);
+        FruitsData models = listagricultureinformation.get(position);
 
         holder.nameTv.setText(models.getName());
         try {
@@ -52,7 +52,7 @@ public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return listagricultureinformation.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
