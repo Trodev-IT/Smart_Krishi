@@ -15,7 +15,7 @@ import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class CowAdapter extends RecyclerView.Adapter<com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder> {
+public class CowAdapter extends RecyclerView.Adapter<CowAdapter.MyViewHolder> {
 
     public Context context;
     public ArrayList<CowData> listanimal;
@@ -29,10 +29,10 @@ public class CowAdapter extends RecyclerView.Adapter<com.trodev.smartkrishi.AllC
 
     @NonNull
     @Override
-    public com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CowAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.listanimal, parent, false);
-        return new com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
 
     }
 

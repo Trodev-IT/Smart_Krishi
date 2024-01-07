@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.hen;
+package com.trodev.smartkrishi.AnotherCultivateAndTechnology.business;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class HenActivity extends AppCompatActivity {
+public class BusninessActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
@@ -17,9 +17,9 @@ public class HenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hen);
+        setContentView(R.layout.activity_busniness);
 
-        getSupportActionBar().setTitle("হাস, মুরগি পালন");
+        getSupportActionBar().setTitle("ব্যবসা বানিজ্য");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);

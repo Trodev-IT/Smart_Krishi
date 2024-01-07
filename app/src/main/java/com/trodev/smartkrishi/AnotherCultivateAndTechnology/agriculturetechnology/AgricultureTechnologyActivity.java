@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AnotherCultivateFarming.agriculturetechnology;
+package com.trodev.smartkrishi.AnotherCultivateAndTechnology.agriculturetechnology;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;

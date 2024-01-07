@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AnotherCultivateFarming.health;
+package com.trodev.smartkrishi.AllCultivateAndFarming.hen.quail;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,22 +9,20 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class HealthActivity extends AppCompatActivity {
-
+public class QuailActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health);
+        setContentView(R.layout.activity_quail);
 
-        getSupportActionBar().setTitle("স্বাস্থ্য বটিকা");
+        getSupportActionBar().setTitle("কোয়েল পাখি পালন ও চিকিৎসা");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);
         progressBar= findViewById(R.id.progressBar);
-
         progressBar.setVisibility(View.VISIBLE);
     }
 }

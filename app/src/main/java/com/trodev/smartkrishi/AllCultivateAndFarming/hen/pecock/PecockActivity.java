@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AnotherCultivateFarming.anothernews;
+package com.trodev.smartkrishi.AllCultivateAndFarming.hen.pecock;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,22 +9,20 @@ import android.widget.ProgressBar;
 
 import com.trodev.smartkrishi.R;
 
-public class AnotherNewsActivity extends AppCompatActivity {
-
+public class PecockActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_another_news);
+        setContentView(R.layout.activity_pecock);
 
-        getSupportActionBar().setTitle("ভিন্ন খবর");
+        getSupportActionBar().setTitle("ময়ূর পালন");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);
         progressBar= findViewById(R.id.progressBar);
-
         progressBar.setVisibility(View.VISIBLE);
     }
 }

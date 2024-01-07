@@ -4,37 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".AllCultivateAndFarming.hen.HensActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <!--load data and show from database-->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/advice_item_layout"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <!--Main Activity for showing pdf view-->
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -47,7 +22,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -56,7 +31,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/kalpurush"
                     android:gravity="center"
-                    android:text="মিশ্র শস্য চাষ ও খামার"
+                    android:text="হাস, মুরগি ও অন্যান্য পাখি পালন এবং পদ্ধতি"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -65,163 +40,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/farmer"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
-                            android:layout_margin="5dp"
-                            android:backgroundTint="#FFFFFF"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/farmer" />
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="কৃষি তথ্য"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:id="@+id/fish"
-                                android:layout_width="65dp"
-                                android:layout_height="65dp"
-                                android:layout_margin="5dp"
-                                android:backgroundTint="#FFFFFF"
-                                app:cardCornerRadius="15dp"
-                                app:cardElevation="5dp">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:src="@drawable/fish" />
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="মৎস্য চাষ"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <com.google.android.material.card.MaterialCardView
-                                android:id="@+id/cow"
-                                android:layout_width="65dp"
-                                android:layout_height="65dp"
-                                android:layout_margin="5dp"
-                                android:backgroundTint="#FFFFFF"
-                                app:cardCornerRadius="15dp"
-                                app:cardElevation="5dp">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:src="@drawable/cow" />
-
-                                </LinearLayout>
-
-                            </com.google.android.material.card.MaterialCardView>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="গবাদি পশু"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -234,88 +52,7 @@
                             android:id="@+id/hen"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
-                            android:layout_margin="5dp"
                             android:layout_gravity="center"
-                            android:backgroundTint="#FFFFFF"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/hen" />
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="হাঁস-মুরগী ও অন্যান্য\nপাখি পালন"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/kalpurush"
-                    android:gravity="center"
-                    android:text="অন্যান্য চাষাবাদ ও আধুনিক প্রযুক্তি"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/health"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
@@ -330,7 +67,7 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/health" />
+                                    android:src="@drawable/hen1" />
 
                             </LinearLayout>
 
@@ -341,7 +78,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="স্বাস্থ্য\nবটিকা"
+                            android:text="মুরগি পালন ও\nপদ্ধতি"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
@@ -361,9 +98,10 @@
                             android:orientation="vertical">
 
                             <com.google.android.material.card.MaterialCardView
-                                android:id="@+id/business"
+                                android:id="@+id/duck"
                                 android:layout_width="65dp"
                                 android:layout_height="65dp"
+                                android:layout_gravity="center"
                                 android:layout_margin="5dp"
                                 android:backgroundTint="#FFFFFF"
                                 app:cardCornerRadius="15dp"
@@ -378,7 +116,7 @@
                                     <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/business" />
+                                        android:src="@drawable/duck" />
 
                                 </LinearLayout>
 
@@ -389,7 +127,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="ব্যবসা\nবানিজ্য"
+                                android:text="হাঁস পালন ও\nপরিচর্যা"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -411,11 +149,11 @@
                             android:orientation="vertical">
 
                             <com.google.android.material.card.MaterialCardView
-                                android:id="@+id/technology"
+                                android:id="@+id/bee"
                                 android:layout_width="65dp"
                                 android:layout_height="65dp"
-                                android:layout_margin="5dp"
                                 android:layout_gravity="center"
+                                android:layout_margin="5dp"
                                 android:backgroundTint="#FFFFFF"
                                 app:cardCornerRadius="15dp"
                                 app:cardElevation="5dp">
@@ -429,18 +167,18 @@
                                     <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/drone" />
+                                        android:src="@drawable/bee" />
 
                                 </LinearLayout>
 
                             </com.google.android.material.card.MaterialCardView>
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="কৃষি উপকরণ ও\nআধুনিক প্রযুক্তি"
+                                android:text="মৌমাছি চাষ"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -466,97 +204,10 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/success"
+                            android:id="@+id/pecock"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
-                            android:layout_margin="5dp"
                             android:layout_gravity="center"
-                            android:backgroundTint="#FFFFFF"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/success" />
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="সফলদের সাফল্য\nগাথাঁ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/environment"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
-                            android:layout_margin="5dp"
-                            android:layout_gravity="center"
-                            android:backgroundTint="#FFFFFF"
-                            app:cardCornerRadius="15dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/planting" />
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="কৃষি ও পরিবেশ\nবিষয়ক প্রতিবেদন"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/anothernews"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
@@ -571,7 +222,7 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/another" />
+                                    android:src="@drawable/peacock" />
 
                             </LinearLayout>
 
@@ -582,7 +233,192 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="ভিন্ন খবর"
+                            android:text="ময়ূর পালন"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/ostrich"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ostrich" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kalpurush"
+                            android:gravity="center"
+                            android:text="বাণিজ্যিকভাবে\nউটপাখি পালন"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/pheasant"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/pheasant" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kalpurush"
+                            android:gravity="center"
+                            android:text="তিতির পালন"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/quail"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/quail" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kalpurush"
+                            android:gravity="center"
+                            android:text="কোয়েল পাখি পালন\nও চিকিৎসা"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/pigeon"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#FFFFFF"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/pigeon" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kalpurush"
+                            android:gravity="center"
+                            android:text="কবুতর পালন\nও পদ্ধতি"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
@@ -597,6 +433,5 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
 
 </ScrollView>

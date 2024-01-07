@@ -15,13 +15,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.cow.CowActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.fish.FishActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.hen.HenActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.agriculturetechnology.AgricultureTechnologyActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.anothernews.AnotherNewsActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.business.BusninessActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.environment.EnvironmentActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.health.HealthActivity;
-import com.trodev.smartkrishi.AnotherCultivateFarming.success.SuccessActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.hen.HensActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.agriculturetechnology.AgricultureTechnologyActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.anothernews.AnotherNewsActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.business.BusninessActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.environment.EnvironmentActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.success.SuccessActivity;
 import com.trodev.smartkrishi.R;
 
 
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
         hen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), HenActivity.class));
+                startActivity(new Intent(getContext(), HensActivity.class));
 
             }
         });
