@@ -25,7 +25,9 @@
         android:theme="@style/Theme.SmartKrishi"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".AllCultivateAndFarming.agricultureinformation.fruits.ShowPDFActivity"
+            android:exported="false" />
         <activity
             android:name=".AllCultivateAndFarming.hen.HensActivity"
             android:exported="false"
@@ -33,35 +35,35 @@
         <activity
             android:name=".AllCultivateAndFarming.hen.hen.HenActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.quail.QuailActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.pigeon.PigeonActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.pheasant.PheasantActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.pecock.PecockActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.ostrich.OstrichActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.duck.DuckActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.bee.BeeActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
         <activity
             android:name=".AllCultivateAndFarming.cow.cowkeeping.CowKeepingActivity"
             android:exported="true"
