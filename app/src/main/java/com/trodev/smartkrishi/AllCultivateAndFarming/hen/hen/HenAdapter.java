@@ -1,8 +1,6 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.fish.nativefish;
-
+package com.trodev.smartkrishi.AllCultivateAndFarming.hen.hen;
 
 import android.content.Context;
-import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,35 +11,31 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
-import com.trodev.smartkrishi.AllCultivateAndFarming.cow.cowkeeping.CowData;
 import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class NativeFishAdapter extends RecyclerView.Adapter<NativeFishAdapter.MyViewHolder> {
-
+public class HenAdapter extends RecyclerView.Adapter<HenAdapter.MyViewHolder> {
     public Context context;
-    public ArrayList<NativeFishData> listfishl;
+    public ArrayList<HenData> listhen;
     public String Category;
 
-    public NativeFishAdapter(Context context, ArrayList<NativeFishData> listfishl, String category) {
+    public HenAdapter(Context context, ArrayList<HenData> listhen, String category) {
         this.context = context;
-        this.listfishl = listfishl;
+        this.listhen = listhen;
         Category = category;
     }
 
     @NonNull
     @Override
-    public NativeFishAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(context).inflate(R.layout.listfishl, parent, false);
+    public HenAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(context).inflate(R.layout.listhen, parent, false);
         return new MyViewHolder(view);
-
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        NativeFishData models = listfishl.get(position);
+    public void onBindViewHolder(@NonNull HenAdapter.MyViewHolder holder, int position) {
+        HenData models = listhen.get(position);
 
         holder.nameTv.setText(models.getName());
         try {
@@ -51,23 +45,20 @@ public class NativeFishAdapter extends RecyclerView.Adapter<NativeFishAdapter.My
         }
 
     }
+
     @Override
     public int getItemCount() {
-        return listfishl.size();
+        return listhen.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         TextView nameTv;
-        ImageView imageView, arrow;
-
-
+        ImageView imageView;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            nameTv = itemView.findViewById(R.id.nameTv);
-            imageView = itemView.findViewById(R.id.imageIv);
-
+            nameTv= itemView.findViewById(R.id.nameTv);
+            imageView= itemView.findViewById(R.id.imageIv);
         }
     }
 }

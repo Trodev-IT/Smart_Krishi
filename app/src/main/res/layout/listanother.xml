@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kalpurush"
-                android:text="হাস-মুরগী ও অন্যান্য পাখি পালন সম্পর্কে বিস্তারিত জানুন"
+                android:text="অন্যান্য চাষাবাদ ও আধুনিক প্রযুক্তি সম্পর্কে বিস্তারিত জানুন"
                 android:textColor="@color/black"
                 android:textSize="10sp"
                 android:textStyle="bold" />

@@ -26,6 +26,45 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".AllCultivateAndFarming.agricultureinformation.fruits.ShowPDFActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.HensActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.hen.HenActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.quail.QuailActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.pigeon.PigeonActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.pheasant.PheasantActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.pecock.PecockActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.ostrich.OstrichActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.duck.DuckActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
+            android:name=".AllCultivateAndFarming.hen.bee.BeeActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.hen.HensActivity" />
+        <activity
             android:name=".AllCultivateAndFarming.cow.cowkeeping.CowKeepingActivity"
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.cow.CowActivity" />
@@ -44,7 +83,7 @@
         <activity
             android:name=".AllCultivateAndFarming.cow.cowacommodation.CowAcommodationActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.cow.CowActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.cow.CowActivity" />
         <activity
             android:name=".AllCultivateAndFarming.fish.prawn.PrawnActivity"
             android:exported="true"
@@ -72,7 +111,7 @@
         <activity
             android:name=".AllCultivateAndFarming.fish.combinedfish.CombinedFishActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.fish.FishActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.fish.FishActivity" />
         <activity
             android:name=".AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity"
             android:exported="true"
@@ -116,38 +155,34 @@
         <activity
             android:name=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.agriculturetechnology.AgricultureTechnologyActivity"
+            android:name=".AnotherCultivateAndTechnology.agriculturetechnology.AgricultureTechnologyActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.anothernews.AnotherNewsActivity"
+            android:name=".AnotherCultivateAndTechnology.anothernews.AnotherNewsActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.business.BusninessActivity"
+            android:name=".AnotherCultivateAndTechnology.business.BusninessActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.environment.EnvironmentActivity"
+            android:name=".AnotherCultivateAndTechnology.environment.EnvironmentActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.success.SuccessActivity"
+            android:name=".AnotherCultivateAndTechnology.success.SuccessActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AnotherCultivateFarming.health.HealthActivity"
+            android:name=".AnotherCultivateAndTechnology.health.HealthActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".advice.AdviceAllActivity"
             android:exported="false" />
-        <activity
-            android:name=".AllCultivateAndFarming.hen.HenActivity"
-            android:exported="true"
-            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AllCultivateAndFarming.fish.FishActivity"
             android:exported="true"
@@ -159,14 +194,14 @@
         <activity
             android:name=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activity.AboutUsActivity"
             android:exported="false" />
         <activity
             android:name=".PrivacyPolicy"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activity.SignInActivity"
             android:exported="false" />
