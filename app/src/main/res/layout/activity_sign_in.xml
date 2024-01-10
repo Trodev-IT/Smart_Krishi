@@ -1,62 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="0dp"
-    android:background="@drawable/back2"
+    android:background="@drawable/back7"
     android:orientation="vertical"
     android:scrollbars="none"
     tools:context=".activity.SignInActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="120dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="কৃষিতে আনি আধুনিকতার ছোঁয়া"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="@color/color_6"
-                android:textSize="25sp"
-                />
-        </RelativeLayout>
-
-        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="32dp">-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="50dp"-->
-<!--                android:layout_height="50dp"-->
-<!--                android:src="@drawable/ic_demo_logo"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="কৃষিতে আনি আধুনিকতার ছোঁয়া"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/color_6"
+            android:textSize="22sp"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="120dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="SignIn"
             android:textAlignment="center"
             android:textColor="@color/color_6"
-            android:textSize="40sp" />
+            android:textSize="25sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -73,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:inputType="textEmailAddress"
+                android:padding="15dp"
                 android:singleLine="true"
                 android:textColor="@color/black" />
 
@@ -94,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:inputType="textEmailAddress"
+                android:padding="15dp"
                 android:singleLine="true"
                 android:textColor="@color/black" />
 
@@ -120,13 +103,14 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/app_color"
                 android:fontFamily="@font/poppins_regular"
-                android:padding="10dp"
-                android:text="Submit"
-                android:textAllCaps="true"
-                android:textSize="15sp"
+                android:padding="13dp"
+                android:text="Signin"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                app:cornerRadius="15dp" />
+                app:cornerRadius="7dp" />
 
         </FrameLayout>
 
@@ -141,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Don't Have an Account ?"
+                android:text="New to Smart Krishi?"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -160,4 +144,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</RelativeLayout>

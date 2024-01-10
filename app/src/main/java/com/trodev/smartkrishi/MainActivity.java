@@ -1,25 +1,30 @@
 package com.trodev.smartkrishi;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.trodev.smartkrishi.fragment.BooksFragment;
@@ -33,6 +38,7 @@ import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
+    private boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout drawerLayout;
     SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;
@@ -224,14 +230,62 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // In this code, android lifecycle exit on 2 times back-pressed.
+//    @Override
+//    public void onBackPressed() {
+//        if (pressedTime + 2000 > System.currentTimeMillis()) {
+//            super.onBackPressed();
+//            finish();
+//        } else {
+//            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+//        }
+//        pressedTime = System.currentTimeMillis();
+//    }
+
     @Override
     public void onBackPressed() {
-        if (pressedTime + 2000 > System.currentTimeMillis()) {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
-            finish();
-        } else {
-            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+            return;
         }
-        pressedTime = System.currentTimeMillis();
+
+        this.doubleBackToExitPressedOnce = true;
+        showExitCardViewDialog();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000); // Reset the flag after 2 seconds
     }
-}
+
+    private void showExitCardViewDialog() {
+        // Create a custom layout for the exit dialog
+        View exitDialogView = LayoutInflater.from(this).inflate(R.layout.cardview, null);
+
+        // Customize the TextView or add more views as needed
+        //TextView exitDialogText = exitDialogView.findViewById(R.id.exitDialogText);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(exitDialogView)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        final AlertDialog dialog = builder.create();
+
+        // Customize the animation if needed
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        dialog.show();
+    }
+    }

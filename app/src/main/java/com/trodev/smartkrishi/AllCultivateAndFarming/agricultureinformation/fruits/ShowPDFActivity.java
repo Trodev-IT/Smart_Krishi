@@ -5,8 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.trodev.smartkrishi.R;
@@ -32,10 +36,10 @@ public class ShowPDFActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         /*action bar title*/
-        getSupportActionBar().setTitle("পিডিএফ দেখুন");
+        getSupportActionBar().setTitle("বিস্তারিত দেখুন");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        /*get data on FruitsAdapterr*/
+        /*get data on FruitsAdapter*/
         pdf = getIntent().getStringExtra("pdf");
 
         /*web view*/
@@ -46,7 +50,7 @@ public class ShowPDFActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(ShowPDFActivity.this);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        progressDialog = ProgressDialog.show(this, "পিডিএফ লোড হচ্ছে", "কিছুক্ষণ অপেক্ষা করুন");
+        progressDialog = ProgressDialog.show(this, "বিস্তারিত দেখানো হচ্ছে", "কিছুক্ষণ অপেক্ষা করুন");
         progressDialog.show();
 
         new PdfDownload().execute(pdf);
