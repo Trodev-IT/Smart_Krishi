@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fruits;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.potato;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,13 +19,12 @@ import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHolder> {
-
+public class PotatoAdapter extends RecyclerView.Adapter<PotatoAdapter.MyViewHolder> {
     public Context context;
-    public ArrayList<FruitsData> listagricultureinformation;
+    public ArrayList<PotatoData> listagricultureinformation;
     public String Category;
 
-    public FruitsAdapter(Context context, ArrayList<FruitsData> listagricultureinformation, String category) {
+    public PotatoAdapter(Context context, ArrayList<PotatoData> listagricultureinformation, String category) {
         this.context = context;
         this.listagricultureinformation = listagricultureinformation;
         Category = category;
@@ -33,17 +32,15 @@ public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHold
 
     @NonNull
     @Override
-    public FruitsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
+    public PotatoAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.listagricultureinformation, parent, false);
         return new MyViewHolder(view);
-
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FruitsAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PotatoAdapter.MyViewHolder holder, int position) {
 
-        FruitsData models = listagricultureinformation.get(position);
+        PotatoData models = listagricultureinformation.get(position);
 
         holder.nameTv.setText(models.getName());
         try {
@@ -66,6 +63,7 @@ public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHold
         /*animation view with slider*/
         holder.cardView.startAnimation(AnimationUtils.loadAnimation(holder.itemView.getContext(), R.anim.slider));
 
+
     }
 
     @Override
@@ -74,18 +72,15 @@ public class FruitsAdapter extends RecyclerView.Adapter<FruitsAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-
         TextView nameTv;
         ImageView imageView;
         CardView cardView;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             nameTv = itemView.findViewById(R.id.nameTv);
             imageView = itemView.findViewById(R.id.imageIv);
             cardView= itemView.findViewById(R.id.cardView);
-
         }
     }
 }

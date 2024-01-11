@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.firebase.database.DatabaseReference;
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.cow.CowActivity;
@@ -24,10 +27,13 @@ import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthActivit
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.success.SuccessActivity;
 import com.trodev.smartkrishi.R;
 
+import java.util.ArrayList;
+
 
 public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView;
+    ImageSlider imageSlider;
     CardView farmer, fish, cow, hen, health, business, technology, success, environment, anothernews ;
 //    ArrayList<AdviceModel> model;
 //    AdviceAdapter adapter;
@@ -53,7 +59,18 @@ public class HomeFragment extends Fragment {
         success= view.findViewById(R.id.success);
         environment= view.findViewById(R.id.environment);
         anothernews= view.findViewById(R.id.anothernews);
-        recyclerView= view.findViewById(R.id.recyclerView);
+        //recyclerView= view.findViewById(R.id.recyclerView);
+        imageSlider= view.findViewById(R.id.slider);
+        ArrayList<SlideModel> slideModels= new ArrayList<>();
+
+        slideModels.add(new SlideModel(R.drawable.image1, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image3, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image4, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image5, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.image6, ScaleTypes.FIT));
+
+        imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
         /*set on click listener*/
         farmer.setOnClickListener(new View.OnClickListener() {

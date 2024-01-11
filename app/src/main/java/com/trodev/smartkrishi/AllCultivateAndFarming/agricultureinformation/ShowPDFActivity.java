@@ -1,16 +1,12 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.fruits;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.trodev.smartkrishi.R;

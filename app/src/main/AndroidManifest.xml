@@ -26,7 +26,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinformation.fruits.ShowPDFActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.ShowPDFActivity"
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity"/>
         <activity
