@@ -114,7 +114,7 @@
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.fish.FishActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.vegetable.VegetableActivity"
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity

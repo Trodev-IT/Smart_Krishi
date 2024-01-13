@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.flowers;
+package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.vegetable;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,20 +22,20 @@ import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class FlowersActivity extends AppCompatActivity {
+public class VegetableActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
     DatabaseReference reference, dbRef;
-    ArrayList<FlowersData> listagricultureinformation;
-    FlowersAdapter adapter;
+    ArrayList<VegetableData> listagricultureinformation;
+    VegetableAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flowers);
+        setContentView(R.layout.activity_vegitable);
 
-        getSupportActionBar().setTitle("ফুল চাষ");
+        getSupportActionBar().setTitle("শাক-সবজি চাষ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);
@@ -48,7 +48,7 @@ public class FlowersActivity extends AppCompatActivity {
 
     private void showData() {
 
-        dbRef = reference.child("ফুল চাষ");
+        dbRef = reference.child("শাক-সবজি চাষ");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -59,12 +59,12 @@ public class FlowersActivity extends AppCompatActivity {
                     recyclerView.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        FlowersData data = snapshot.getValue(FlowersData.class);
+                        VegetableData data = snapshot.getValue(VegetableData.class);
                         listagricultureinformation.add(data);
                     }
                     recyclerView.setHasFixedSize(true);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(FlowersActivity.this));
-                    adapter = new FlowersAdapter(FlowersActivity.this, listagricultureinformation, "ফুল চাষ");
+                    recyclerView.setLayoutManager(new LinearLayoutManager(VegetableActivity.this));
+                    adapter = new VegetableAdapter(VegetableActivity.this, listagricultureinformation, "শাক-সবজি চাষ");
                     recyclerView.setAdapter(adapter);
                     progressBar.setVisibility(View.INVISIBLE);
                 }
@@ -74,7 +74,7 @@ public class FlowersActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 progressBar.setVisibility(View.VISIBLE);
                 recyclerView.setVisibility(View.INVISIBLE);
-                Toast.makeText(FlowersActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(VegetableActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
