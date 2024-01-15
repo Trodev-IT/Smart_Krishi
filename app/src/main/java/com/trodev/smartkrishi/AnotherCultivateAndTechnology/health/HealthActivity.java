@@ -43,7 +43,6 @@ public class HealthActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         reference = FirebaseDatabase.getInstance().getReference().child("AnotherCultivateAndTechnology");
-
         showData();
     }
     private void showData() {

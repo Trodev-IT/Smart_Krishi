@@ -21,7 +21,7 @@ import com.trodev.smartkrishi.AllCultivateAndFarming.fish.FishActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.hen.HensActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.agriculturetechnology.AgricultureTechnologyActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.anothernews.AnotherNewsActivity;
-import com.trodev.smartkrishi.AnotherCultivateAndTechnology.business.BusninessActivity;
+import com.trodev.smartkrishi.AnotherCultivateAndTechnology.business.BusinessActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.environment.EnvironmentActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.success.SuccessActivity;
@@ -109,7 +109,7 @@ public class HomeFragment extends Fragment {
         business.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), BusninessActivity.class));
+                startActivity(new Intent(getContext(), BusinessActivity.class));
             }
         });
         technology.setOnClickListener(new View.OnClickListener() {

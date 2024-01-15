@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.ShowPDFActivity;
+import com.trodev.smartkrishi.activity.ShowPDFActivity;
 import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;

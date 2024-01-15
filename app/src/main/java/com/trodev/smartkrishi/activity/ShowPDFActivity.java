@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation;
+package com.trodev.smartkrishi.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
