@@ -26,8 +26,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinformation.fruits.ShowPDFActivity"
-            android:exported="false" />
+            android:name=".AllCultivateAndFarming.agricultureinformation.ShowPDFActivity"
+            android:exported="true"
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity"/>
         <activity
             android:name=".AllCultivateAndFarming.hen.HensActivity"
             android:exported="false"
@@ -113,7 +114,7 @@
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.fish.FishActivity" />
         <activity
-            android:name=".AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity"
+            android:name=".AllCultivateAndFarming.agricultureinformation.vegetable.VegetableActivity"
             android:exported="true"
             android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity" />
         <activity

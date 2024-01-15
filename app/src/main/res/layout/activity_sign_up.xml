@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="0dp"
-    android:background="@drawable/back2"
+    android:background="@drawable/back7"
     android:orientation="vertical"
     android:scrollbars="none"
     tools:context=".activity.SignUpActivity">
@@ -29,7 +29,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="22sp"
             />
     </RelativeLayout>
 
@@ -51,18 +51,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Sign Up!"
+            android:text="Sign Up"
             android:textAlignment="center"
             android:textColor="@color/color_6"
-            android:textSize="40sp" />
+            android:textSize="25sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="10dp"
             android:hint="Enter your name"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black">
@@ -103,37 +103,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:hint="Division"
+            android:hint="Password"
             android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black">
+            app:boxStrokeColor="@color/black"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/divisionEt"
+                android:id="@+id/passwordEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:singleLine="true"
                 android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="0dp"-->
-<!--            android:hint="Division"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            app:boxStrokeColor="@color/black">-->
-
-<!--            <AutoCompleteTextView-->
-<!--                android:id="@+id/divisionEt"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="text" />-->
-
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -155,6 +139,43 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:hint="Division"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            app:boxStrokeColor="@color/black">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/divisionEt"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:inputType="text"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:hint="@string/selected"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <AutoCompleteTextView
+                android:id="@+id/divisionEt"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -193,27 +214,6 @@
 
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:hint="Password"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:passwordToggleEnabled="true">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordEt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:textColor="@color/black" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="20dp"
@@ -233,13 +233,14 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/app_color"
                 android:fontFamily="@font/poppins_regular"
-                android:padding="10dp"
-                android:text="Submit"
+                android:padding="13dp"
+                android:text="Signup"
+                android:textColor="@color/white"
                 android:gravity="center"
-                android:textAllCaps="true"
+                android:textAllCaps="false"
                 android:textStyle="bold"
-                android:textSize="15sp"
-                app:cornerRadius="15dp" />
+                android:textSize="18sp"
+                app:cornerRadius="7dp" />
 
         </FrameLayout>
 
