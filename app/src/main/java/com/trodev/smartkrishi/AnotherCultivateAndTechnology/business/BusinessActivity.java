@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AnotherCultivateAndTechnology.anothernews;
+package com.trodev.smartkrishi.AnotherCultivateAndTechnology.business;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,26 +16,24 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthActivity;
-import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthAdapter;
-import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthData;
 import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class AnotherNewsActivity extends AppCompatActivity {
+public class BusinessActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ProgressBar progressBar;
     DatabaseReference reference, dbRef;
-    ArrayList<AnotherNewsData> listanother;
-    AnotherNewsAdapter adapter;
+    ArrayList<BusinessData> listanother;
+    BusinessAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_another_news);
+        setContentView(R.layout.activity_busniness);
 
-        getSupportActionBar().setTitle("ভিন্ন খবর");
+        getSupportActionBar().setTitle("ব্যবসা বানিজ্য");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView= findViewById(R.id.recyclerView);
@@ -47,7 +45,7 @@ public class AnotherNewsActivity extends AppCompatActivity {
     }
     private void showData() {
 
-        dbRef = reference.child("ভিন্ন খবর");
+        dbRef = reference.child("ব্যবসা বানিজ্য");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -58,12 +56,12 @@ public class AnotherNewsActivity extends AppCompatActivity {
                     recyclerView.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.INVISIBLE);
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        AnotherNewsData data = snapshot.getValue(AnotherNewsData.class);
+                        BusinessData data = snapshot.getValue(BusinessData.class);
                         listanother.add(data);
                     }
                     recyclerView.setHasFixedSize(true);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(AnotherNewsActivity.this));
-                    adapter = new AnotherNewsAdapter(AnotherNewsActivity.this, listanother, "ভিন্ন খবর");
+                    recyclerView.setLayoutManager(new LinearLayoutManager(BusinessActivity.this));
+                    adapter = new BusinessAdapter(BusinessActivity.this, listanother, "ব্যবসা বানিজ্য");
                     recyclerView.setAdapter(adapter);
                     progressBar.setVisibility(View.INVISIBLE);
                 }
@@ -73,9 +71,10 @@ public class AnotherNewsActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 progressBar.setVisibility(View.VISIBLE);
                 recyclerView.setVisibility(View.INVISIBLE);
-                Toast.makeText(AnotherNewsActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(BusinessActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
     }
+
 }

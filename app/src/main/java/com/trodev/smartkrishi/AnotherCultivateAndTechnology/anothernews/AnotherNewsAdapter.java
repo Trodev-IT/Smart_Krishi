@@ -1,4 +1,4 @@
-package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.potato;
+package com.trodev.smartkrishi.AnotherCultivateAndTechnology.anothernews;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,28 +19,29 @@ import com.trodev.smartkrishi.R;
 
 import java.util.ArrayList;
 
-public class PotatoAdapter extends RecyclerView.Adapter<PotatoAdapter.MyViewHolder> {
+public class AnotherNewsAdapter extends RecyclerView.Adapter<AnotherNewsAdapter.MyViewHolder> {
     public Context context;
-    public ArrayList<PotatoData> listagricultureinformation;
+    public ArrayList<AnotherNewsData> listanother;
     public String Category;
 
-    public PotatoAdapter(Context context, ArrayList<PotatoData> listagricultureinformation, String category) {
+    public AnotherNewsAdapter(Context context, ArrayList<AnotherNewsData> listanother, String category) {
         this.context = context;
-        this.listagricultureinformation = listagricultureinformation;
+        this.listanother = listanother;
         Category = category;
     }
 
     @NonNull
     @Override
-    public PotatoAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.listagricultureinformation, parent, false);
+    public AnotherNewsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.listanother, parent, false);
+
         return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PotatoAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        PotatoData models = listagricultureinformation.get(position);
+        AnotherNewsData models = listanother.get(position);
 
         holder.nameTv.setText(models.getName());
         try {
@@ -68,7 +69,7 @@ public class PotatoAdapter extends RecyclerView.Adapter<PotatoAdapter.MyViewHold
 
     @Override
     public int getItemCount() {
-        return listagricultureinformation.size();
+        return listanother.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -81,6 +82,7 @@ public class PotatoAdapter extends RecyclerView.Adapter<PotatoAdapter.MyViewHold
             nameTv = itemView.findViewById(R.id.nameTv);
             imageView = itemView.findViewById(R.id.imageIv);
             cardView= itemView.findViewById(R.id.cardView);
+
         }
     }
 }
