@@ -26,9 +26,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.AllNewsActivity"
+            android:exported="true"
+            android:parentActivityName=".newsactivity.NewsActivity"/>
+        <activity
+            android:name=".weatheractivity.WeatherActivity"
+            android:exported="true"
+            android:parentActivityName=".weatheractivity.WeatherActivity" />
+        <activity
+            android:name=".newsactivity.NewsActivity"
+            android:exported="true"
+            android:parentActivityName=".newsactivity.NewsActivity" />
+        <activity
             android:name=".activity.ShowPDFActivity"
             android:exported="true"
-            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity"/>
+            android:parentActivityName=".AllCultivateAndFarming.agricultureinformation.fruits.FruitsActivity" />
         <activity
             android:name=".AllCultivateAndFarming.hen.HensActivity"
             android:exported="false"
@@ -181,9 +193,6 @@
             android:name=".AnotherCultivateAndTechnology.health.HealthActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".advice.AdviceAllActivity"
-            android:exported="false" />
         <activity
             android:name=".AllCultivateAndFarming.fish.FishActivity"
             android:exported="true"

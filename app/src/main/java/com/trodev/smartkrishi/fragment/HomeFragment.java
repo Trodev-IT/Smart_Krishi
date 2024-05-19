@@ -35,8 +35,6 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     ImageSlider imageSlider;
     CardView farmer, fish, cow, hen, health, business, technology, success, environment, anothernews ;
-//    ArrayList<AdviceModel> model;
-//    AdviceAdapter adapter;
     DatabaseReference reference;
     public HomeFragment() {
         // Required empty public constructor
