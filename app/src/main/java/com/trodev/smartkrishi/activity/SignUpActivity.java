@@ -139,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 return;
         }
 
-        if (password.length() <= 8) {
+        if (password.length() <= 7) {
                 passwordET.setError("Minimum password length should be 8 character");
                 passwordET.requestFocus();
                 return;
