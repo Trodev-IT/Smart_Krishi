@@ -214,13 +214,12 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.menu_email) {
             Toast.makeText(this, "Send Us Mail", Toast.LENGTH_SHORT).show();
             try {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("plain/text");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"help.smartkrishi@gmail.com"});
+                Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
+                //intent.setType("plain/text");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Help of");
-                intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum, ");
-                startActivity(Intent.createChooser(intent, ""));
-            } catch (ActivityNotFoundException e) {
+                intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
+                startActivity(Intent.createChooser(intent, "Dear Sir"));
+            } catch (ActivityNotFoundException e){
                 Toast.makeText(this, "Unable to access email", Toast.LENGTH_SHORT).show();
             }
 
@@ -284,8 +283,7 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog dialog = builder.create();
 
         // Customize the animation if needed
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-
+        Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
     }

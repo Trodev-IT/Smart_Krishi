@@ -21,7 +21,7 @@ public class ShowPDFActivity extends AppCompatActivity {
     private String pdf;
     PDFView pdfView;
     ProgressDialog progressDialog;
-    private WebView webView;
+    WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +39,14 @@ public class ShowPDFActivity extends AppCompatActivity {
         pdf = getIntent().getStringExtra("pdf");
 
         /*web view*/
-        //  webView = findViewById(R.id.webView);
+        //webView = findViewById(R.id.webView);
         pdfView = findViewById(R.id.pdfView);
 
         /*progress dialog show and init*/
         progressDialog = new ProgressDialog(ShowPDFActivity.this);
         progressDialog.setIndeterminate(true);
         progressDialog.setCancelable(false);
-        progressDialog = ProgressDialog.show(this, "বিস্তারিত দেখানো হচ্ছে", "কিছুক্ষণ অপেক্ষা করুন");
+        progressDialog = ProgressDialog.show(ShowPDFActivity.this,"বিস্তারিত দেখানো হচ্ছে","কিছুক্ষণ অপেক্ষা করুন");
         progressDialog.show();
 
         new PdfDownload().execute(pdf);
