@@ -113,7 +113,16 @@ public class ProfileFragment extends Fragment {
         contactLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                go_to_email();
+                Toast.makeText(getContext(), "Send Us Mail", Toast.LENGTH_SHORT).show();
+                try {
+                    Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
+                    //intent.setType("plain/text");
+                    intent.putExtra(Intent.EXTRA_SUBJECT, "Help of");
+                    intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
+                    startActivity(Intent.createChooser(intent, "Dear Sir"));
+                } catch (ActivityNotFoundException e){
+                    Toast.makeText(getContext(), "Unable to access email", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

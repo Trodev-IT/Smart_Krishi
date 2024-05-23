@@ -153,10 +153,11 @@ public class MainActivity extends AppCompatActivity {
         }
         int itemId = item.getItemId();
 
-        if (itemId == R.id.menu_notification) {
-            Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
-
-        } else if (itemId == R.id.menu_privacy) {
+//        if (itemId == R.id.menu_notification) {
+//            Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+//
+//        }
+        if (itemId == R.id.menu_privacy) {
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, PrivacyPolicy.class));
 
