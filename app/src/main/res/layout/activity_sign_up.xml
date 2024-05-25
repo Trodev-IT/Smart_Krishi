@@ -197,13 +197,13 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="8dp"
                 android:visibility="invisible" />
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp">
+                android:layout_marginTop="5dp">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/signup"

@@ -47,9 +47,9 @@
                         android:id="@+id/news"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scaleType="fitXY"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
                         android:src="@drawable/news1" />
 
                 </androidx.cardview.widget.CardView>
@@ -95,9 +95,9 @@
                         android:id="@+id/weather"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scaleType="fitXY"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
                         android:src="@drawable/weather1" />
 
                 </androidx.cardview.widget.CardView>

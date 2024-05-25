@@ -11,48 +11,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--load data and show from database-->
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="5dp"-->
-<!--            app:cardCornerRadius="5dp"-->
-<!--            app:cardElevation="4dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/recyclerView"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    tools:listitem="@layout/advice_item_layout"/>-->
-
-<!--            </LinearLayout>-->
-
-<!--        </androidx.cardview.widget.CardView>-->
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            app:cardBackgroundColor="@color/green"
+            android:layout_margin="15dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_margin="15dp"
-            app:cardElevation="20dp"
-            app:cardCornerRadius="25dp">
+            app:cardBackgroundColor="@color/green"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="20dp">
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                app:iss_period="1000"
                 app:iss_auto_cycle="true"
-                app:iss_delay="1000"
                 app:iss_corner_radius="20"
+                app:iss_delay="1000"
+                app:iss_period="1000"
                 app:iss_title_background="@drawable/gradient">
 
             </com.denzcoskun.imageslider.ImageSlider>
@@ -258,8 +235,8 @@
                             android:id="@+id/hen"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
-                            android:layout_margin="5dp"
                             android:layout_gravity="center"
+                            android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
                             app:cardElevation="5dp">
@@ -438,8 +415,8 @@
                                 android:id="@+id/technology"
                                 android:layout_width="65dp"
                                 android:layout_height="65dp"
-                                android:layout_margin="5dp"
                                 android:layout_gravity="center"
+                                android:layout_margin="5dp"
                                 android:backgroundTint="#FFFFFF"
                                 app:cardCornerRadius="15dp"
                                 app:cardElevation="5dp">
@@ -493,8 +470,8 @@
                             android:id="@+id/success"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
-                            android:layout_margin="5dp"
                             android:layout_gravity="center"
+                            android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
                             app:cardElevation="5dp">
@@ -537,8 +514,8 @@
                             android:id="@+id/environment"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
-                            android:layout_margin="5dp"
                             android:layout_gravity="center"
+                            android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
                             app:cardElevation="5dp">
