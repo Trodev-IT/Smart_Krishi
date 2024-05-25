@@ -1,5 +1,24 @@
 package com.trodev.smartkrishi;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,21 +26,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.app.Dialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Toast;
-
 import com.google.android.material.navigation.NavigationView;
+import com.onesignal.OneSignal;
+import com.onesignal.debug.LogLevel;
 import com.trodev.smartkrishi.fragment.BooksFragment;
 import com.trodev.smartkrishi.fragment.HomeFragment;
 import com.trodev.smartkrishi.fragment.NewsFragment;
@@ -33,17 +40,24 @@ import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
+    private boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout drawerLayout;
     SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
 
+    private static final String ONESIGNAL_APP_ID = "0cef1653-c181-475a-8e47-7fa04d359f11";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Verbose Logging set to help debug issues, remove before releasing your app.
+        OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
+        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
+        OneSignal.getUser().getPushSubscription().optIn();
 
         /*init all drawer layout*/
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -52,14 +66,11 @@ public class MainActivity extends AppCompatActivity {
         /*init views*/
         smoothBottomBar = findViewById(R.id.bottombar);
 
-
-        // #######################
         // Drawer Layout implement
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.start, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        // #################################################################
         // navigation view work process
         navigationView.setNavigationItemSelectedListener(this::onOptionsItemSelected);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -151,10 +162,11 @@ public class MainActivity extends AppCompatActivity {
         }
         int itemId = item.getItemId();
 
-        if (itemId == R.id.menu_notification) {
-            Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
-
-        } else if (itemId == R.id.menu_privacy) {
+//        if (itemId == R.id.menu_notification) {
+//            Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+//
+//        }
+        if (itemId == R.id.menu_privacy) {
             Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, PrivacyPolicy.class));
 
@@ -212,13 +224,12 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.menu_email) {
             Toast.makeText(this, "Send Us Mail", Toast.LENGTH_SHORT).show();
             try {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("plain/text");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"help.smartkrishi@gmail.com"});
+                Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
+                //intent.setType("plain/text");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Help of");
-                intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum, ");
-                startActivity(Intent.createChooser(intent, ""));
-            } catch (ActivityNotFoundException e) {
+                intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
+                startActivity(Intent.createChooser(intent, "Dear Sir"));
+            } catch (ActivityNotFoundException e){
                 Toast.makeText(this, "Unable to access email", Toast.LENGTH_SHORT).show();
             }
 
@@ -228,14 +239,61 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // In this code, android lifecycle exit on 2 times back-pressed.
+//    @Override
+//    public void onBackPressed() {
+//        if (pressedTime + 2000 > System.currentTimeMillis()) {
+//            super.onBackPressed();
+//            finish();
+//        } else {
+//            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+//        }
+//        pressedTime = System.currentTimeMillis();
+//    }
+
     @Override
     public void onBackPressed() {
-        if (pressedTime + 2000 > System.currentTimeMillis()) {
+        if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
-            finish();
-        } else {
-            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+            return;
         }
-        pressedTime = System.currentTimeMillis();
+
+        this.doubleBackToExitPressedOnce = true;
+        showExitCardViewDialog();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000); // Reset the flag after 2 seconds
     }
-}
+
+    private void showExitCardViewDialog() {
+        // Create a custom layout for the exit dialog
+        View exitDialogView = LayoutInflater.from(this).inflate(R.layout.cardview, null);
+
+        // Customize the TextView or add more views as needed
+        //TextView exitDialogText = exitDialogView.findViewById(R.id.exitDialogText);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(exitDialogView)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        final AlertDialog dialog = builder.create();
+
+        // Customize the animation if needed
+        Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.show();
+    }
+    }

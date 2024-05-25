@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity">
+    android:orientation="vertical"
+    tools:context=".AllCultivateAndFarming.agricultureinformation.vegetable.VegetableActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_above="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchview_bg"
+        android:layout_margin="10dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="search here..."
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
+        android:layout_below="@+id/search_view"
         tools:listitem="@layout/listagricultureinformation" />
 
     <ProgressBar
@@ -21,4 +34,4 @@
         android:visibility="gone"
         />
 
-</RelativeLayout>
+</LinearLayout>

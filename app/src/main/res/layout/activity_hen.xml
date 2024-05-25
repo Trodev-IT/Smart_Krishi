@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllCultivateAndFarming.hen.HenActivity">
+    tools:context=".AllCultivateAndFarming.hen.hen.HenActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        tools:listitem="@layout/listagricultureinformation" />
+        tools:listitem="@layout/listhen" />
 
     <ProgressBar
         android:id="@+id/progressBar"

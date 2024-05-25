@@ -11,27 +11,28 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--load data and show from database-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp">
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/green"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="20dp">
 
-            <LinearLayout
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="150dp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="20"
+                app:iss_delay="1000"
+                app:iss_period="1000"
+                app:iss_title_background="@drawable/gradient">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/advice_item_layout"/>
-
-            </LinearLayout>
-
+            </com.denzcoskun.imageslider.ImageSlider>
         </androidx.cardview.widget.CardView>
 
         <!--Main Activity for showing pdf view-->
@@ -39,9 +40,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp">
+            android:layout_margin="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="20dp">
 
 
             <LinearLayout
@@ -234,6 +235,7 @@
                             android:id="@+id/hen"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
+                            android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
@@ -255,11 +257,11 @@
                         </com.google.android.material.card.MaterialCardView>
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="হাঁস-মুরগী ও\nঅন্যান্য পাখি"
+                            android:text="হাঁস-মুরগী ও অন্যান্য\nপাখি পালন"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
@@ -277,9 +279,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="4dp">
+            android:layout_margin="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="20dp">
 
 
             <LinearLayout
@@ -294,7 +296,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/kalpurush"
                     android:gravity="center"
-                    android:text="অন্যান্য চাষাবাদ ও খামার"
+                    android:text="অন্যান্য চাষাবাদ ও আধুনিক প্রযুক্তি"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -340,7 +342,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/kalpurush"
                             android:gravity="center"
-                            android:text="স্বাস্থ্য বটিকা"
+                            android:text="স্বাস্থ্য\nবটিকা"
                             android:textAllCaps="false"
                             android:textColor="@color/black"
                             android:textSize="13sp"
@@ -388,7 +390,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="ব্যবসা বানিজ্য"
+                                android:text="ব্যবসা\nবানিজ্য"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -413,6 +415,7 @@
                                 android:id="@+id/technology"
                                 android:layout_width="65dp"
                                 android:layout_height="65dp"
+                                android:layout_gravity="center"
                                 android:layout_margin="5dp"
                                 android:backgroundTint="#FFFFFF"
                                 app:cardCornerRadius="15dp"
@@ -434,11 +437,11 @@
                             </com.google.android.material.card.MaterialCardView>
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="কৃষি উপকরণ\nও প্রযুক্তি"
+                                android:text="কৃষি উপকরণ ও\nআধুনিক প্রযুক্তি"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"
@@ -467,6 +470,7 @@
                             android:id="@+id/success"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
+                            android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"
@@ -510,6 +514,7 @@
                             android:id="@+id/environment"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
+                            android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
                             app:cardCornerRadius="15dp"

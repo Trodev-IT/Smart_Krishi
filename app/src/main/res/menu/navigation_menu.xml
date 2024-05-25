@@ -3,10 +3,10 @@
 
     <group android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/menu_notification"
-            android:icon="@drawable/notification_icon"
-            android:title="Notification" />
+<!--        <item-->
+<!--            android:id="@+id/menu_notification"-->
+<!--            android:icon="@drawable/notification_icon"-->
+<!--            android:title="Notification" />-->
 
         <item
             android:id="@+id/menu_privacy"

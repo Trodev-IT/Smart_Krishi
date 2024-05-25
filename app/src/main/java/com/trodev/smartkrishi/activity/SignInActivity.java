@@ -67,7 +67,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         if (itemId == R.id.signup) {
             startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
-            Toast.makeText(SignInActivity.this, "Register Here", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignInActivity.this, "রেজিস্ট্রেশন করুন", Toast.LENGTH_SHORT).show();
             finish();
         } else if (itemId == R.id.signin) {
             userLogin();
@@ -101,12 +101,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                     startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                    Toast.makeText(SignInActivity.this, "SignIn successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "লগিন সফল হয়েছে", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     finish();
 
                 } else {
-                    Toast.makeText(SignInActivity.this, "SignIn un-successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this, "লগিন সফল হয়নি", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.VISIBLE);
                 }
             }

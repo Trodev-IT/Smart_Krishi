@@ -39,36 +39,31 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private EditText username, emailET, divisionET, ageET, numberET, passwordET;
     private FirebaseAuth firebaseAuth;
     private ProgressBar progressBar;
-
-//    String[] item= {"Dhaka", "Sylhet", "Rajshahi", "Chittagonj", "Barishal", "Khulna", "Maymensing"};
-//
-//    AutoCompleteTextView autoCompleteTextView;
-//    ArrayAdapter<String> adapterItem;
-
+    AutoCompleteTextView autocompletetxt;
+    ArrayAdapter<String> adapterItem;
+    String[] item= {"Select Division","Dhaka", "Sylhet", "Rajshahi", "Chittagonj", "Barishal", "Khulna", "Maymensing"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-//        autoCompleteTextView= findViewById(R.id.divisionEt);
-//        adapterItem= new ArrayAdapter<String>(this, R.layout.list_item, item);
-//
-//        autoCompleteTextView.setAdapter(adapterItem);
-//        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                String item= adapterView.getItemAtPosition(i).toString();
-//                Toast.makeText(SignUpActivity.this, "Item "+item, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-
         /*hide action bar*/
         getSupportActionBar().hide();
 
+        /*Select Division from list*/
+        autocompletetxt= findViewById(R.id.divisionEt);
+        adapterItem= new ArrayAdapter<String>(this, R.layout.list_division, item);
+        autocompletetxt.setAdapter(adapterItem);
+        autocompletetxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                String item= adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(getApplicationContext(), "Division "+item, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         signup = findViewById(R.id.signup);
         signup.setOnClickListener(this);
-
         signin = findViewById(R.id.signin);
         signin.setOnClickListener(this);
 
@@ -85,26 +80,22 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         numberET = findViewById(R.id.numberEt);
         passwordET = findViewById(R.id.passwordEt);
         progressBar = findViewById(R.id.progressBar);
-
     }
+
     // go to SignIn form with clicking
     @Override
     public void onClick(View view) {
         int itemId = view.getId();
-
         if (itemId == R.id.signin) {
             startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
-            Toast.makeText(SignUpActivity.this, "SignIn Here", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignUpActivity.this, "লগিন করুন", Toast.LENGTH_SHORT).show();
             finish();
         } else if (itemId == R.id.signup) {
             registarUser();
 
         }
-
     }
-
     private void registarUser() {
-
         String usersname, email, division, age, number, password;
         usersname = username.getText().toString().trim();
         email = emailET.getText().toString().trim();
@@ -148,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 return;
         }
 
-        if (password.length() <= 8) {
+        if (password.length() <= 7) {
                 passwordET.setError("Minimum password length should be 8 character");
                 passwordET.requestFocus();
                 return;
@@ -172,14 +163,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 progressBar.setVisibility(View.GONE);
-                                                Toast.makeText(SignUpActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignUpActivity.this, "রেজিস্ট্রেশন সফল হয়েছে", Toast.LENGTH_SHORT).show();
                                                 startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                                                 finish();
 
                                             } else {
 
                                                 progressBar.setVisibility(View.VISIBLE);
-                                                Toast.makeText(SignUpActivity.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignUpActivity.this, "রেজিস্ট্রেশন সফল হয়নি", Toast.LENGTH_SHORT).show();
 
                                             }
                                         }

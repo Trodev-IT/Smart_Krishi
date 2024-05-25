@@ -17,7 +17,7 @@ import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.medi
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.potato.PotatoActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.rice.RiceActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.roof.RoofActivity;
-import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.vegitable.VegitableActivity;
+import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.vegetable.VegetableActivity;
 import com.trodev.smartkrishi.R;
 
 public class AgricultureInformationActivity extends AppCompatActivity {
@@ -74,7 +74,7 @@ public class AgricultureInformationActivity extends AppCompatActivity {
         vegitable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), VegitableActivity.class));
+                startActivity(new Intent(getApplicationContext(), VegetableActivity.class));
             }
         });
         deases.setOnClickListener(new View.OnClickListener() {

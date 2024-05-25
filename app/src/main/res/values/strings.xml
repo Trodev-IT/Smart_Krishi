@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Smart Krishi</string>
     <string name="select">Select Item</string>
+    <string name="selected">Division</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -21,7 +22,7 @@
     <string name="cv_string">👉👉 আপনি যদি খুব কম সময়ে CV বানাতে চান তাহলে আমরাই দিচ্ছি ডিজিটাল CV মেকার সিস্টেম সুবিধা। এই-জন্য আপনাকে সামান্য চার্জ পরিশোধ করতে হবে। আমাদের থেকে পিডিএফ ফাইল এবং ওয়ার্ড ফাইল পাবেন। </string>
     <string name="cv_notice">📝 CV অর্ডার করতে হলে আপনাকে নিম্মলিখিত কিছু তথ্য দিয়ে সাহায্য করতে হবে 📝 </string>
     <string name="cv_payment_number">💰💰<b> পেমেন্ট মেথড</b>💰💰\n01615257555 (বিকাশ, নগদ, রকেট)</string>
-    <string name="copyright">© Copyright 2021-2023 Trodev, all right reserved.</string>
+    <string name="copyright">© Copyright Smart Krshi, all right reserved.</string>
 
     <string name="about_us_one">Welcome to Smart Krishi – your ultimate companion in the journey of finding your dream job! Our innovative job seeker application is designed to provide you with a comprehensive platform to explore a world of opportunities. From detailed job descriptions, captivating images, to informative PDF files, we offer an immersive experience that goes beyond traditional job search.</string>
     <string name="premium_text">Career Matcher Pro আপনাদের জন্য নিয়ে এলো বিসিএস সহ সকল সরকারি চাকরিজীবীদের পরীক্ষার প্রস্তুতির জন্য সকল ধরনের মডেল টেস্ট এবং MCQ সমাধান। সেই সাথে নিয়ে এসেছে রিটেন পরীক্ষার প্রস্তুতি সহ সকল পিডিএফ</string>
