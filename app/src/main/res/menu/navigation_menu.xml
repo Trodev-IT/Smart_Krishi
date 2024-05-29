@@ -11,37 +11,37 @@
         <item
             android:id="@+id/menu_privacy"
             android:icon="@drawable/privacy_icon"
-            android:title="Privacy Policy" />
+            android:title="প্রাইভেসি পলেসি" />
         <item
             android:id="@+id/menu_share"
             android:icon="@drawable/share_icon"
-            android:title="Share" />
+            android:title="শেয়ার করুন" />
         <item
             android:id="@+id/menu_rating"
             android:icon="@drawable/rating_icon"
-            android:title="Rate Us" />
+            android:title="রেট দিন" />
 
         <item
             android:id="@+id/menu_apps"
             android:icon="@drawable/ic_android"
-            android:title="Our Apps" />
+            android:title="আমাদের অ্যাপ সমুহ" />
     </group>
 
     <group android:checkableBehavior="single">
-        <item android:title="Contact With Us">
+        <item android:title="যোগাযোগ করুন">
             <menu>
                 <item
                     android:id="@+id/menu_developer"
                     android:icon="@drawable/ic_developer"
-                    android:title="Developer" />
+                    android:title="ডেভেলপার" />
                 <item
                     android:id="@+id/menu_company"
                     android:icon="@drawable/website_icon"
-                    android:title="Website" />
+                    android:title="ওয়েবসাইট" />
                 <item
                     android:id="@+id/menu_email"
                     android:icon="@drawable/email_icon"
-                    android:title="Send Us Mail" />
+                    android:title="আমাদের মেইল করুন" />
             </menu>
         </item>
     </group>

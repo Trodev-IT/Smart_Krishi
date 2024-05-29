@@ -56,7 +56,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     private void isUserSigninauto() {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             startActivity(new Intent(SignInActivity.this, MainActivity.class));
-            Toast.makeText(this, "SignIn Successful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "সাইন ইন সফল হয়েছে", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
@@ -67,7 +67,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         if (itemId == R.id.signup) {
             startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
-            Toast.makeText(SignInActivity.this, "রেজিস্ট্রেশন করুন", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignInActivity.this, "সাইন আপ করুন", Toast.LENGTH_SHORT).show();
             finish();
         } else if (itemId == R.id.signin) {
             userLogin();
@@ -80,12 +80,12 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         String password = passwordET.getText().toString().trim();
 
         if (email.isEmpty()) {
-            emailET.setError("Email is required");
+            emailET.setError("ইমেইল প্রয়োজন");
             emailET.requestFocus();
             return;
         }
         if (password.isEmpty()) {
-            passwordET.setError("Password must be 8 character");
+            passwordET.setError("পাসওয়ার্ড অবশ্যই ৮ ক্যারেক্টারের হতে হবে");
             passwordET.requestFocus();
             return;
         }

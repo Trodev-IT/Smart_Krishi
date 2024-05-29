@@ -207,7 +207,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activity.AboutUsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".PrivacyPolicy"
             android:exported="true"

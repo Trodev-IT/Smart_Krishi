@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /*When apps start show HomeFragments*/
-        setTitle("Home");
+        setTitle("হোম");
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, new HomeFragment());
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemSelect(int i) {
 
                 if (i == 0) {
-                    setTitle("Home");
+                    setTitle("হোম");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new HomeFragment());
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (i == 1) {
-                    setTitle("Books");
+                    setTitle("কৃষি হাত বই");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new BooksFragment());
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (i == 2) {
-                    setTitle("News");
+                    setTitle("সংবাদ সমুহ");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new NewsFragment());
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (i == 3) {
-                    setTitle("Profile");
+                    setTitle("প্রোফাইল");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new ProfileFragment());
@@ -158,11 +158,11 @@ public class MainActivity extends AppCompatActivity {
 //
 //        }
         if (itemId == R.id.menu_privacy) {
-            Toast.makeText(this, "Privacy Policy", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "প্রাইভেসি পলেসি", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, PrivacyPolicy.class));
 
         } else if (itemId == R.id.menu_share) {
-            Toast.makeText(this, "Share our apps", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "এপ শেয়ার করা হচ্ছে", Toast.LENGTH_SHORT).show();
             try {
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
@@ -173,19 +173,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(shareIntent, "choose one"));
 
             } catch (Exception e) {
-                Toast.makeText(this, "Unable to share!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, " এপ শেয়ার হচ্ছে না", Toast.LENGTH_SHORT).show();
             }
         } else if (itemId == R.id.menu_rating) {
-            Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "রেট দিন", Toast.LENGTH_SHORT).show();
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-                Toast.makeText(this, "Rate us", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "রেট দিন", Toast.LENGTH_SHORT).show();
             } catch (ActivityNotFoundException e) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
             }
 
         } else if (itemId == R.id.menu_apps) {
-            Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "আমাদের এপ সমুহ", Toast.LENGTH_SHORT).show();
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=6580660399707616800")));
             } catch (ActivityNotFoundException e) {
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         } else if (itemId == R.id.menu_developer) {
-            Toast.makeText(this, "Developer Contact", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ডেভেলপার", Toast.LENGTH_SHORT).show();
             final Dialog dialog = new Dialog(this);
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.contact_bottomsheet_layout);
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             dialog.getWindow().setGravity(Gravity.BOTTOM);
 
         } else if (itemId == R.id.menu_company) {
-            Toast.makeText(this, "Company Website", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ওয়েবসাইট", Toast.LENGTH_SHORT).show();
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.trodev.com/")));
             } catch (ActivityNotFoundException e) {
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         } else if (itemId == R.id.menu_email) {
-            Toast.makeText(this, "Send Us Mail", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "আমাদের মেইল করুন", Toast.LENGTH_SHORT).show();
             try {
                 Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
                 //intent.setType("plain/text");
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
                 startActivity(Intent.createChooser(intent, "Dear Sir"));
             } catch (ActivityNotFoundException e){
-                Toast.makeText(this, "Unable to access email", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "ইমেইল এক্সেস হচ্ছে না", Toast.LENGTH_SHORT).show();
             }
 
         }
@@ -268,13 +268,13 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(exitDialogView)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton("হ্যা", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton("না", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

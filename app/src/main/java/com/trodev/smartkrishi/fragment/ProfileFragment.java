@@ -73,20 +73,20 @@ public class ProfileFragment extends Fragment {
                     String pass = userProfile.password;
 
                     nameET.setText(uname);
-                    emailET.setText("E-mail: " + email);
-                    divisionET.setText("Division: " + division);
-                    ageET.setText("Age: " +age);
-                    numberET.setText("Mobile: " + num);
-                    passEt.setText("Password: " + pass);
+                    emailET.setText("ইমেইল: " + email);
+                    divisionET.setText("বিভাগ: " + division);
+                    ageET.setText("বয়স: " +age);
+                    numberET.setText("মোবাইল নাম্বার: " + num);
+                    passEt.setText("পাসওয়ার্ড: " + pass);
 
                     /*toast sms*/
-                    Toast.makeText(getActivity(), uname + " info found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), uname + " তথ্য পাওয়া গিয়েছে", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getActivity(), "Something went wrong!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "কিছু সমস্যা পাওয়া গিয়েছে!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -96,7 +96,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getActivity(), SignInActivity.class));
-                Toast.makeText(getActivity(), "log-out successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "লগ আউট সফল হয়েছে", Toast.LENGTH_SHORT).show();
                 getActivity().finishAffinity();
             }
         });
@@ -113,7 +113,7 @@ public class ProfileFragment extends Fragment {
         contactLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "Send Us Mail", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "আমাদের মেইল করুন", Toast.LENGTH_SHORT).show();
                 try {
                     Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
                     //intent.setType("plain/text");
@@ -121,7 +121,7 @@ public class ProfileFragment extends Fragment {
                     intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
                     startActivity(Intent.createChooser(intent, "Dear Sir"));
                 } catch (ActivityNotFoundException e){
-                    Toast.makeText(getContext(), "Unable to access email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "ইমেইল এক্সেস হচ্ছে না", Toast.LENGTH_SHORT).show();
                 }
             }
         });

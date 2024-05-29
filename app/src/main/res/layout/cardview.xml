@@ -23,10 +23,10 @@
         <TextView
             android:layout_width="355dp"
             android:layout_height="match_parent"
-            android:fontFamily="@font/space_grotesk_bold"
+            android:fontFamily="@font/kalpurush"
             android:gravity="center"
-            android:text="Are you sure you want to exit?"
+            android:text="আপনি কি অ্যাপ থেকে বের হতে চাচ্ছেন?"
             android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 </LinearLayout>
