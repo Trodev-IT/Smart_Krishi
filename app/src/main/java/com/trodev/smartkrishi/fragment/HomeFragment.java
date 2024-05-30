@@ -61,12 +61,16 @@ public class HomeFragment extends Fragment {
         imageSlider= view.findViewById(R.id.slider);
         ArrayList<SlideModel> slideModels= new ArrayList<>();
 
-        slideModels.add(new SlideModel(R.drawable.image1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image3, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image4, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image5, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image6, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_01, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_02, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_03, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_04, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_05, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_06, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_07, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_08, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_09, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.bg_img_10, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 

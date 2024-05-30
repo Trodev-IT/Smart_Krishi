@@ -31,16 +31,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
+                    android:fontFamily="@font/kalpurush"
                     android:gravity="center"
-                    android:text="Smart Krishi"
+                    android:text="স্মার্ট কৃষি"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
+                    android:fontFamily="@font/kalpurush"
                     android:text="@string/about_us_one"
                     android:textColor="@color/black"
                     android:justificationMode="inter_word"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kalpurush"
                     android:gravity="center"
-                    android:text="Smart Krishi অ্যাপ এ যে Features পাবেন"
+                    android:text="স্মার্ট কৃষি অ্যাপটিতে যেসব সুবিধা সমুহ পাবেন"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -123,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:autoLink="email"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Email: help.smartkrishi@gmail.com"
+                    android:text="ইমেইল: help.smartkrishi@gmail.com"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:autoLink="phone"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Phone: +8801638752371"
+                    android:text="মোবাইল নাম্বার: +8801638752371"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 

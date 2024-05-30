@@ -77,11 +77,26 @@
                         android:autoLink="email"
                         android:fontFamily="@font/trebuc"
                         android:gravity="center"
-                        android:text="📧 pias.trodev@gmail.com"
+                        android:text="📧 trodevit@gmail.com "
                         android:textColor="@color/black"
                         android:textIsSelectable="true"
                         android:textSize="15sp"
                         android:textStyle="bold" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/email2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:autoLink="email"-->
+<!--                        android:fontFamily="@font/trebuc"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="📧 pias.trodev@gmail.com"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textIsSelectable="true"-->
+<!--                        android:textSize="15sp"-->
+<!--                        android:textStyle="bold" />-->
 
                     <TextView
                         android:id="@+id/mobile1"
@@ -93,7 +108,7 @@
                         android:autoLink="phone"
                         android:fontFamily="@font/trebuc"
                         android:gravity="center"
-                        android:text="📱 +8801638752371"
+                        android:text="📱 +8801955554447"
                         android:textIsSelectable="true"
                         android:textSize="15sp"
                         android:textStyle="bold" />

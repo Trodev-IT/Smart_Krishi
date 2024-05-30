@@ -105,42 +105,42 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         password = passwordET.getText().toString().trim();
 
         if (usersname.isEmpty()) {
-            username.setError("Name is required");
+            username.setError("নাম প্রয়োজন");
             username.requestFocus();
             return;
         }
         if (email.isEmpty()) {
-            emailET.setError("E-mail is required");
+            emailET.setError("ইমেইল প্রয়োজন");
             emailET.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailET.setError("Please provide valid email!");
+            emailET.setError("দয়াকরে সঠিক ইমেইল প্রদান করুন!");
             emailET.requestFocus();
             return;
         }
 
         if (division.isEmpty()) {
-                divisionET.setError("Division is required");
+                divisionET.setError("বিভাগ প্রয়োজন");
                 divisionET.requestFocus();
                 return;
         }
 
         if (age.isEmpty()) {
-                ageET.setError("Age is required");
+                ageET.setError("বয়স প্রয়োজন");
                 ageET.requestFocus();
                 return;
         }
 
         if (number.isEmpty()) {
-                numberET.setError("Number is required");
+                numberET.setError("মোবাইল নাম্বার প্রয়োজন");
                 numberET.requestFocus();
                 return;
         }
 
         if (password.length() <= 7) {
-                passwordET.setError("Minimum password length should be 8 character");
+                passwordET.setError("পাসওয়ার্ড অবশ্যই ৮ ক্যারেক্টারের হতে হবে");
                 passwordET.requestFocus();
                 return;
         }
