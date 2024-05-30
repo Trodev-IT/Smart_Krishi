@@ -4,20 +4,20 @@
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="হোম" />
     <item
         android:id="@+id/menu_books"
         android:icon="@drawable/book_icon"
-        android:title="Books" />
+        android:title="কৃষি হাত বই" />
 
     <item
         android:id="@+id/menu_news"
         android:icon="@drawable/news_icon"
-        android:title="News" />
+        android:title="সংবাদ সমুহ" />
 
     <item
         android:id="@+id/menu_about"
         android:icon="@drawable/person_icon"
-        android:title="Me" />
+        android:title="প্রোফাইল" />
 
 </menu>

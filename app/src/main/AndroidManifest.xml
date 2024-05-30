@@ -18,17 +18,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/smart_krishi"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
+        android:roundIcon="@drawable/smart_krishi"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartKrishi"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".activity.AllNewsActivity"
-            android:exported="true"
-            android:parentActivityName=".newsactivity.NewsActivity"/>
+
         <activity
             android:name=".weatheractivity.WeatherActivity"
             android:exported="true"
@@ -207,7 +204,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activity.AboutUsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PrivacyPolicy"
             android:exported="true"

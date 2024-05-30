@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:scrollbars="none"
-    android:background="@color/white"
     tools:context=".activity.SplashActivity">
 
     <ImageView
@@ -27,20 +26,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_centerInParent="true"
             android:gravity="center"
-            android:layout_centerInParent="true">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/kalpurush"
+                android:text="স্মার্ট কৃষিতে"
+                android:textColor="@color/color_6"
+                android:textSize="50sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/space_grotesk_bold"
-                android:text="Welcome to"
+                android:fontFamily="@font/kalpurush"
+                android:text="আপনাকে স্বাগতম!"
                 android:textColor="@color/color_6"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -48,37 +57,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:fontFamily="@font/space_grotesk_bold"
-                android:text="Smart Krishi"
+                android:fontFamily="@font/kalpurush"
+                android:text="কৃষক এবং খামারিদের পরম বন্ধু!"
                 android:textColor="@color/color_6"
-                android:textSize="45sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/space_grotesk_bold"
-                android:text="Your ultimate agriculture and farming assistant partner"
-                android:textColor="@color/color_6"
-                android:textSize="20sp" />
+                android:textSize="22sp" />
 
         </LinearLayout>
 
     </RelativeLayout>
 
     <TextView
-        android:layout_width="350dp"
+        android:id="@+id/splash"
+        android:layout_width="370dp"
         android:layout_height="65dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/kalpurush"
         android:gravity="center"
+        android:text="কৃষিতে নতুনত্ব অন্বেষণ করতে এগিয়ে যান"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        android:text="Get in to collect your destiny!"
-        android:fontFamily="@font/space_grotesk_bold"
-        android:background="@drawable/button"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

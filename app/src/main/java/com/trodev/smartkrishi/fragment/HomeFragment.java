@@ -15,6 +15,9 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.firebase.database.DatabaseReference;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 import com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.AgricultureInformationActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.cow.CowActivity;
 import com.trodev.smartkrishi.AllCultivateAndFarming.fish.FishActivity;
@@ -26,6 +29,7 @@ import com.trodev.smartkrishi.AnotherCultivateAndTechnology.environment.Environm
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.health.HealthActivity;
 import com.trodev.smartkrishi.AnotherCultivateAndTechnology.success.SuccessActivity;
 import com.trodev.smartkrishi.R;
+import com.trodev.smartkrishi.SlidersAdapter;
 
 import java.util.ArrayList;
 
@@ -33,9 +37,21 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     RecyclerView recyclerView;
-    ImageSlider imageSlider;
+    SliderView sliderView;
     CardView farmer, fish, cow, hen, health, business, technology, success, environment, anothernews ;
     DatabaseReference reference;
+
+    int[] images = {R.drawable.bg_img_01,
+            R.drawable.bg_img_02,
+            R.drawable.bg_img_03,
+            R.drawable.bg_img_04,
+            R.drawable.bg_img_05,
+            R.drawable.bg_img_06,
+            R.drawable.bg_img_07,
+            R.drawable.bg_img_08,
+            R.drawable.bg_img_09,
+            R.drawable.bg_img_10,
+    };
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -58,17 +74,14 @@ public class HomeFragment extends Fragment {
         environment= view.findViewById(R.id.environment);
         anothernews= view.findViewById(R.id.anothernews);
         //recyclerView= view.findViewById(R.id.recyclerView);
-        imageSlider= view.findViewById(R.id.slider);
-        ArrayList<SlideModel> slideModels= new ArrayList<>();
+        sliderView = view.findViewById(R.id.image_slider);
 
-        slideModels.add(new SlideModel(R.drawable.image1, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image2, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image3, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image4, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image5, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.image6, ScaleTypes.FIT));
+        SlidersAdapter sliderAdapter = new SlidersAdapter(images);
 
-        imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
 
         /*set on click listener*/
         farmer.setOnClickListener(new View.OnClickListener() {

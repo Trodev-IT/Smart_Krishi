@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.SmartKrishi" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <!-- Customize your light theme here. -->
-        
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/app_color</item>
         <item name="colorPrimaryVariant">@color/app_color</item>
@@ -24,7 +24,7 @@
 
     <!--navigation menu font family-->
     <style name="NavigationMenuViewStyle" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/kalpurush</item>
     </style>
 
 
@@ -34,7 +34,7 @@
     </style>
 
     <style name="fontfamily" parent="TextAppearance.Design.Tab">
-        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/kalpurush</item>
     </style>
 
     <style name="fontfamilys" parent="TextAppearance.Design.Tab">

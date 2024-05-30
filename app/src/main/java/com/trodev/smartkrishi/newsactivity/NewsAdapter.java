@@ -2,6 +2,7 @@ package com.trodev.smartkrishi.newsactivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.trodev.smartkrishi.R;
-import com.trodev.smartkrishi.activity.AllNewsActivity;
-import com.trodev.smartkrishi.activity.ShowPDFActivity;
 
 import java.util.ArrayList;
 
@@ -53,11 +52,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(context, AllNewsActivity.class);
-                intent.putExtra("url", models.getUrl());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(models.url));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
+
             }
         });
 
@@ -76,11 +75,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         TextView url;
         ImageView imageView;
         CardView cardView;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView= itemView.findViewById(R.id.imageIv);
-            cardView= itemView.findViewById(R.id.cardView);
+            imageView = itemView.findViewById(R.id.imageIv);
+            cardView = itemView.findViewById(R.id.cardView);
             //url= itemView.findViewById(R.id.url);
 
         }
