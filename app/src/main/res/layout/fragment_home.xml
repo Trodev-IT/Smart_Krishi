@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".fragment.HomeFragment">
 
     <LinearLayout
@@ -19,7 +20,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             app:cardBackgroundColor="@color/green"
-            app:cardCornerRadius="25dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="20dp">
 
             <com.denzcoskun.imageslider.ImageSlider
@@ -33,6 +34,7 @@
                 app:iss_title_background="@drawable/gradient">
 
             </com.denzcoskun.imageslider.ImageSlider>
+
         </androidx.cardview.widget.CardView>
 
         <!--Main Activity for showing pdf view-->
