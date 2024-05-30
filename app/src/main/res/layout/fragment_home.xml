@@ -13,7 +13,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             android:layout_margin="15dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="30dp"
@@ -25,7 +25,7 @@
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="250dp"
                 app:iss_auto_cycle="true"
                 app:iss_corner_radius="20"
                 app:iss_delay="1000"

@@ -30,10 +30,10 @@ public class VegetableAdapter extends RecyclerView.Adapter<VegetableAdapter.MyVi
         Category = category;
     }
 
-    public void setFilteredList(ArrayList<VegetableData> filteredList) {
-        this.listagricultureinformation = filteredList;
-        notifyDataSetChanged();
-    }
+//    public void setFilteredList(ArrayList<VegetableData> filteredList) {
+//        this.listagricultureinformation = filteredList;
+//        notifyDataSetChanged();
+//    }
 
     @NonNull
     @Override
