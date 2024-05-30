@@ -2,6 +2,7 @@ package com.trodev.smartkrishi.AllCultivateAndFarming.agricultureinformation.veg
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +30,7 @@ public class VegetableActivity extends AppCompatActivity {
     DatabaseReference reference, dbRef;
     ArrayList<VegetableData> listagricultureinformation;
     VegetableAdapter adapter;
+    SearchView search_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,46 @@ public class VegetableActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("শাক-সবজি চাষ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView= findViewById(R.id.recyclerView);
-        progressBar= findViewById(R.id.progressBar);
+        recyclerView = findViewById(R.id.recyclerView);
+        progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
+
+        /*search view implement*/
+        search_view = findViewById(R.id.search_view);
+        search_view.clearFocus();
+        search_view.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
 
         reference = FirebaseDatabase.getInstance().getReference().child("AgricultureInformation");
         showData();
+    }
+
+    public void filterList(String text) {
+
+        ArrayList<VegetableData> filteredList = new ArrayList<>();
+        for (VegetableData envatoModels : listagricultureinformation) {
+            if (envatoModels.getName().toLowerCase().contains(text.toLowerCase()) || envatoModels.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(envatoModels);
+                recyclerView.setVisibility(View.VISIBLE);
+            }
+        }
+
+        if (filteredList.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "No data found", Toast.LENGTH_SHORT).show();
+            recyclerView.setVisibility(View.INVISIBLE);
+        } else {
+            adapter.setFilteredList(filteredList);
+        }
     }
 
     private void showData() {

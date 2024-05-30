@@ -30,6 +30,11 @@ public class VegetableAdapter extends RecyclerView.Adapter<VegetableAdapter.MyVi
         Category = category;
     }
 
+    public void setFilteredList(ArrayList<VegetableData> filteredList) {
+        this.listagricultureinformation = filteredList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public VegetableAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

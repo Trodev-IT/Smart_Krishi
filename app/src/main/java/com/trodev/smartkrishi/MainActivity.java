@@ -27,6 +27,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
+import com.onesignal.OneSignal;
+import com.onesignal.debug.LogLevel;
 import com.trodev.smartkrishi.fragment.BooksFragment;
 import com.trodev.smartkrishi.fragment.HomeFragment;
 import com.trodev.smartkrishi.fragment.NewsFragment;
@@ -45,10 +47,17 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private long pressedTime;
 
+    private static final String ONESIGNAL_APP_ID = "0cef1653-c181-475a-8e47-7fa04d359f11";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Verbose Logging set to help debug issues, remove before releasing your app.
+        OneSignal.getDebug().setLogLevel(LogLevel.VERBOSE);
+        OneSignal.initWithContext(this, ONESIGNAL_APP_ID);
+        OneSignal.getUser().getPushSubscription().optIn();
 
         /*init all drawer layout*/
         drawerLayout = findViewById(R.id.drawerLayout);
