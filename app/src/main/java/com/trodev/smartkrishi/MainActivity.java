@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
-
     private static final String ONESIGNAL_APP_ID = "0cef1653-c181-475a-8e47-7fa04d359f11";
 
     @Override
@@ -224,12 +223,12 @@ public class MainActivity extends AppCompatActivity {
         } else if (itemId == R.id.menu_email) {
             Toast.makeText(this, "Send Us Mail", Toast.LENGTH_SHORT).show();
             try {
-                Intent intent = new Intent (Intent.ACTION_SEND , Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
+                Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:" + "help.smartkrishi@gmail.com"));
                 //intent.setType("plain/text");
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Help of");
                 intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
                 startActivity(Intent.createChooser(intent, "Dear Sir"));
-            } catch (ActivityNotFoundException e){
+            } catch (ActivityNotFoundException e) {
                 Toast.makeText(this, "Unable to access email", Toast.LENGTH_SHORT).show();
             }
 
@@ -296,4 +295,4 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
     }
-    }
+}
