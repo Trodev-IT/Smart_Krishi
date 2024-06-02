@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (i == 2) {
-                    setTitle("সংবাদ সমুহ");
+                    setTitle("কৃষি সুবিধা");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.frameLayout, new NewsFragment());
