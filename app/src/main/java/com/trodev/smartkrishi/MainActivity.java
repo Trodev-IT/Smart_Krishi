@@ -31,7 +31,7 @@ import com.onesignal.OneSignal;
 import com.onesignal.debug.LogLevel;
 import com.trodev.smartkrishi.fragment.BooksFragment;
 import com.trodev.smartkrishi.fragment.HomeFragment;
-import com.trodev.smartkrishi.fragment.NewsFragment;
+import com.trodev.smartkrishi.fragment.ServicesFragment;
 import com.trodev.smartkrishi.fragment.ProfileFragment;
 
 import java.util.Objects;
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     setTitle("কৃষি সুবিধা");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frameLayout, new NewsFragment());
+                    fragmentTransaction.replace(R.id.frameLayout, new ServicesFragment());
                     fragmentTransaction.commit();
 
                     /*set all status bar, navigation bar, toolbar color*/
