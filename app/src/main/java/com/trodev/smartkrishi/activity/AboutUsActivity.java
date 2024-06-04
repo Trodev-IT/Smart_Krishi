@@ -13,7 +13,7 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        getSupportActionBar().setTitle("About Apps");
+        getSupportActionBar().setTitle("অ্যাপ সম্পর্কে জানুন");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

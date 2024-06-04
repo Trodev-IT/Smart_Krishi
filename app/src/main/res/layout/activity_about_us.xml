@@ -34,6 +34,7 @@
                     android:fontFamily="@font/kalpurush"
                     android:gravity="center"
                     android:text="স্মার্ট কৃষি"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -150,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:autoLink="web"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Facebook Page: https://www.facebook.com/smartkrishi"
+                    android:text="Facebook Page: https://web.facebook.com/smartkrishi8"
                     android:textColor="@color/black"
                     android:textSize="11sp" />
 

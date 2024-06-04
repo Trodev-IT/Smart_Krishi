@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".UpazillaServices.RehabilitationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="সেবা প্রাপ্তির সংক্ষিপ্ত বিবরণ"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="ইউনিয়ন কমিটি কর্তৃক প্রগতিশীল কৃষকের উপযুক্ততা যাচাইপূর্বক নীতিমালা অনুযায়ী অগ্রাধিকার তালিকা তৈরি এবং সুপারিশসহ উপজেলা কমিটিতে প্রেরণ করা হয়। উপজেলা কমিটিতে অগ্রাধিকার তালিকা উপস্থাপন ও অনুমোদন করা হয়। ভর্তুকিপ্রাপ্তির সুপারিশসহ সংশ্লিষ্ট ব্যাংকে/কোম্পানি এজেন্ট/ডিলারের নিকট প্রেরণ করা হয়ে থাকে। উপকরণ (বীজ/সার/ডিজেল ইত্যাদি) অনুমোদিত তালিকা অনুযায়ী নির্ধারিত তারিখে কৃষকদের মাঝে বিতরণ করা হয়। অর্থের ক্ষেত্রে ১০ টাকার বিনিময়ে ব্যাংক অ্যাকাউন্ট খোলা বা অ্যাকাউন্ট থাকলে অর্থ ব্যাংক একাউন্টে স্থানান্তর করা হয়ে থাকে।"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সেবা প্রাপ্তির সময়"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="মোট কার্যক্রম: ১-১২ মাস (দাপ্তরিককার্যক্রম: ১৫-৩৫ দিন)"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="প্রয়োজনীয় ফি"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="বিনামূল্যে"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সেবা প্রাপ্তির স্থান"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="ব্লক, উপজেলা ও জেলা পর্যায়ের কৃষি অফিস"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সদায়িত্বপ্রাপ্ত কর্মকর্তা/কর্মচারী"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="১। উপজেলা কৃষি কর্মকর্তা, ২। অতিরিক্ত কৃষি কর্মকর্তা, ৩। কৃষি সম্প্রসারণ কর্মকর্তা, ৪। সহকারী কৃষি সম্প্রসারণ কর্মকর্তা, ৫। SAAO"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="প্রয়োজনীয় কাগজপত্র"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="প্রয়োজন নাই।"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সসেবা প্রাপ্তির শর্তাবলি"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="প্রকৃত ক্ষতিগ্রস্থ কৃষক হতে হবে"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সংশ্লিষ্ট আইন ও বিধি"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="কৃষি সম্প্রসারণ ম্যানুয়েল ও কৃষি সম্প্রসারণ নীতিমালা"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="সেবা প্রদানে ব্যর্থ হলে প্রতিকারকারী কর্মকর্তা"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="উপ-পরিচালক, কৃষি সম্প্রসারণ অধিদপ্তর"
+                android:fontFamily="@font/kalpurush"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
