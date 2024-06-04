@@ -10,10 +10,10 @@
         android:icon="@drawable/book_icon"
         android:title="কৃষি হাত বই" />
 
-    <item
-        android:id="@+id/menu_news"
-        android:icon="@drawable/news_icon"
-        android:title="কৃষি সেবা" />
+<!--    <item-->
+<!--        android:id="@+id/menu_news"-->
+<!--        android:icon="@drawable/news_icon"-->
+<!--        android:title="কৃষি সেবা" />-->
 
     <item
         android:id="@+id/menu_about"

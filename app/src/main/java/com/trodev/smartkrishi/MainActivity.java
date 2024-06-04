@@ -121,20 +121,20 @@ public class MainActivity extends AppCompatActivity {
                     getWindow().setStatusBarColor(Color.parseColor("#008937"));
                 }
 
+//                if (i == 2) {
+//                    setTitle("কৃষি সুবিধা");
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    fragmentTransaction.replace(R.id.frameLayout, new ServicesFragment());
+//                    fragmentTransaction.commit();
+//
+//                    /*set all status bar, navigation bar, toolbar color*/
+//                    smoothBottomBar.setBarBackgroundColor(Color.parseColor("#008937"));
+//                    getWindow().setNavigationBarColor(Color.parseColor("#008937"));
+//                    getWindow().setStatusBarColor(Color.parseColor("#008937"));
+//                }
+
                 if (i == 2) {
-                    setTitle("কৃষি সুবিধা");
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frameLayout, new ServicesFragment());
-                    fragmentTransaction.commit();
-
-                    /*set all status bar, navigation bar, toolbar color*/
-                    smoothBottomBar.setBarBackgroundColor(Color.parseColor("#008937"));
-                    getWindow().setNavigationBarColor(Color.parseColor("#008937"));
-                    getWindow().setStatusBarColor(Color.parseColor("#008937"));
-                }
-
-                if (i == 3) {
                     setTitle("প্রোফাইল");
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
