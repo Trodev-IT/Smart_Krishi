@@ -57,7 +57,7 @@ public class ProfileFragment extends Fragment {
         TextView divisionET = view.findViewById(R.id.divisionTv);
         TextView ageET = view.findViewById(R.id.ageTv);
         TextView numberET = view.findViewById(R.id.mobileTv);
-        TextView passEt = view.findViewById(R.id.passTv);
+        // TextView passEt = view.findViewById(R.id.passTv);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -72,12 +72,12 @@ public class ProfileFragment extends Fragment {
                     String num = userProfile.number;
                     String pass = userProfile.password;
 
-                    nameET.setText(uname);
+                    nameET.setText("নামঃ "+uname);
                     emailET.setText("ইমেইল: " + email);
                     divisionET.setText("বিভাগ: " + division);
                     ageET.setText("বয়স: " +age);
                     numberET.setText("মোবাইল নাম্বার: " + num);
-                    passEt.setText("পাসওয়ার্ড: " + pass);
+                    // passEt.setText("পাসওয়ার্ড: " + pass);
 
                     /*toast sms*/
                     Toast.makeText(getActivity(), uname + " তথ্য পাওয়া গিয়েছে", Toast.LENGTH_SHORT).show();

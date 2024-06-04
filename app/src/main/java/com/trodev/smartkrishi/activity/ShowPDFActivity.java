@@ -29,7 +29,7 @@ public class ShowPDFActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_pdfactivity);
 
         /*disable ss permission*/
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        // getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 
         /*action bar title*/
         getSupportActionBar().setTitle("বিস্তারিত দেখুন");

@@ -127,9 +127,10 @@
                     android:text="০১৬********"
                     android:textColor="@color/app_color"
                     android:textSize="14sp"
+                    android:layout_marginBottom="10dp"
                     android:textStyle="bold" />
 
-                <TextView
+<!--                <TextView
                     android:id="@+id/passTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,7 +140,7 @@
                     android:text="পাসওয়ার্ড"
                     android:textColor="@color/app_color"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold" />-->
 
             </LinearLayout>
 

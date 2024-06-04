@@ -40,13 +40,13 @@ import me.ibrahimsn.lib.OnItemSelectedListener;
 import me.ibrahimsn.lib.SmoothBottomBar;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String ONESIGNAL_APP_ID = "0cef1653-c181-475a-8e47-7fa04d359f11";
+    SmoothBottomBar smoothBottomBar;
     private boolean doubleBackToExitPressedOnce = false;
     private DrawerLayout drawerLayout;
-    SmoothBottomBar smoothBottomBar;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
-    private static final String ONESIGNAL_APP_ID = "0cef1653-c181-475a-8e47-7fa04d359f11";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,12 +228,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Help of");
                 intent.putExtra(Intent.EXTRA_TEXT, "Assalamualaikum");
                 startActivity(Intent.createChooser(intent, "Dear Sir"));
-
             } catch (ActivityNotFoundException e) {
                 Toast.makeText(this, "Unable to access email", Toast.LENGTH_SHORT).show();
-
             }
-
         }
 
         return super.onOptionsItemSelected(item);
@@ -277,19 +274,17 @@ public class MainActivity extends AppCompatActivity {
         //TextView exitDialogText = exitDialogView.findViewById(R.id.exitDialogText);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(exitDialogView)
-                .setPositiveButton("হ্যা", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                })
-                .setNegativeButton("না", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
+        builder.setView(exitDialogView).setPositiveButton("হ্যা", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        }).setNegativeButton("না", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
 
         final AlertDialog dialog = builder.create();
 
