@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/popupbg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/kalpurush"
+                android:gravity="center"
+                android:text="স্মার্ট কৃষি অনুমোদন"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/stop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:justificationMode="inter_word"
+                android:fontFamily="@font/kalpurush"
+                android:text="১। স্মার্ট কৃষি মূলত কৃষক এবং খামারিদের জন্য আধুনিক পিডিএফ সেবা প্রদানকারি মাধ্যম। "
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:justificationMode="inter_word"
+                android:fontFamily="@font/kalpurush"
+                android:text="\n২। স্মার্ট কৃষি আপনাদের থেকে অ্যাকাউন্ট সেবার জন্য নাম, মোবাইল নাম্বার, এবং ইমেইল ছাড়া আর কোন ধরণের সম্মতি চায় নাহ।"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/kalpurush"
+                android:justificationMode="inter_word"
+                android:text="\n৩। মূলত এই সেবার আওতাভুক্ত রয়েছে মৌসুমি ফসলের চাষাবাদ, ফল-মূল চাষ, বালাইনাশক পদ্ধতি, কীটনাষক ব্যাবস্থাপনা, গরু-ছাগল পালন-পালন পদ্ধতি, হাঁস-মুরগি লালন-পালন পদ্ধতি এবং রোগ-বালাই প্রতিরোধ করা সহ আরো বিভিন্ন ধরনের কৃষি পিডিএফ এবং ফার্মিং সেবার বই।"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/kalpurush"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:text="এই অ্যাপ আপনার থেকে বিভিন্ন ক্যাটেগরির পিডিএফ পড়ার জন্য সম্মতি চাচ্ছে"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/kalpurush"
+                    android:text="হ্যাঁ, সম্মতি দিচ্ছি"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

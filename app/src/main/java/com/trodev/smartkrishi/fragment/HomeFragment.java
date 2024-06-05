@@ -1,5 +1,7 @@
 package com.trodev.smartkrishi.fragment;
 
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -147,7 +149,10 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getContext(), AnotherNewsActivity.class));
             }
         });
+
         return view;
 
     }
+
+
 }

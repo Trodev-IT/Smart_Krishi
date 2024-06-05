@@ -92,7 +92,7 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/farmer" />
+                                    android:src="@drawable/infos" />
 
                             </LinearLayout>
 
@@ -247,7 +247,7 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/hen" />
+                                    android:src="@drawable/chicken" />
 
                             </LinearLayout>
 
@@ -387,7 +387,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/kalpurush"
                                 android:gravity="center"
-                                android:text="ব্যবসা বানিজ্\nপিডিএফ"
+                                android:text="ব্যবসা বাণিজ্য\nপিডিএফ"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="13sp"

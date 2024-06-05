@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -14,9 +15,13 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -47,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
+    RelativeLayout layout;
+    Dialog dialog;
+    SharedPreferences sharedPreferences;
+    private static final String  SHARED_PREF_NAME = "mypref";
+    private static final String  KEY_VALUE = "false";
+    boolean value = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         /*init all drawer layout*/
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
+        layout = findViewById(R.id.relative);
 
         /*init views*/
         smoothBottomBar = findViewById(R.id.bottombar);
@@ -151,6 +163,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+
+        value = sharedPreferences.getBoolean(KEY_VALUE, false);
+
+
+        /*create pop up menu*/
+        if(!value)
+            CreatepopUpwindow();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -291,5 +311,45 @@ public class MainActivity extends AppCompatActivity {
         // Customize the animation if needed
         Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show();
+    }
+
+    private void CreatepopUpwindow() {
+
+        Button yes;
+
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE);
+
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popUpView = inflater.inflate(R.layout.popup_screen, null);
+
+        int width = ViewGroup.LayoutParams.MATCH_PARENT;
+        int height = ViewGroup.LayoutParams.WRAP_CONTENT;
+
+        boolean focusable = true;
+
+        PopupWindow popupWindow = new PopupWindow(popUpView, width, height, focusable);
+
+
+        layout.post(new Runnable() {
+            @Override
+            public void run() {
+                popupWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+            }
+        });
+
+
+        yes = popUpView.findViewById(R.id.yes);
+        popUpView.setClickable(true);
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+                Toast.makeText(MainActivity.this, "ধন্যবাদ সম্মতি প্রদান করার জন্য", Toast.LENGTH_SHORT).show();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(KEY_VALUE, true);
+                editor.apply();
+            }
+        });
     }
 }
