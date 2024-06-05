@@ -17,6 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
             app:sliderAnimationDuration="600"
             app:sliderAutoCycleDirection="back_and_forth"
             app:sliderAutoCycleEnabled="true"
@@ -89,25 +91,22 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/infos" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="কৃষি তথ্য পিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="কৃষি তথ্য পিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -138,25 +137,27 @@
                                     android:layout_gravity="center"
                                     android:orientation="vertical">
 
-                                    <ImageView
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kalpurush"
+                                        android:gravity="center"
+                                        android:text="মৎস্য চাষ পিডিএফ"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
+
+<!--                                    <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/fish" />
+                                        android:src="@drawable/fish" />-->
 
                                 </LinearLayout>
 
                             </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="মৎস্য চাষ পিডিএফ"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+
 
                         </LinearLayout>
 
@@ -189,25 +190,27 @@
                                     android:layout_gravity="center"
                                     android:orientation="vertical">
 
-                                    <ImageView
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kalpurush"
+                                        android:gravity="center"
+                                        android:text="গবাদি পশু পিডিএফ"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
+
+<!--                                    <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/cow" />
+                                        android:src="@drawable/cow" />-->
 
                                 </LinearLayout>
 
                             </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="গবাদি পশু পিডিএফ"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+
 
                         </LinearLayout>
 
@@ -230,8 +233,8 @@
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/hen"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:backgroundTint="#FFFFFF"
@@ -242,27 +245,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_margin="10dp"
                                 android:orientation="vertical">
 
-                                <ImageView
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="হাঁস-মুরগী ও অন্যান্য\nপাখি পালন পিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+<!--                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/chicken" />
+                                    android:src="@drawable/chicken" />-->
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="হাঁস-মুরগী ও অন্যান্য\nপাখি পালন পিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -325,25 +331,27 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
+<!--                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/health" />
+                                    android:src="@drawable/health" />-->
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="স্বাস্থ্য বটিকা\nপিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="স্বাস্থ্য বটিকা\nপিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -373,25 +381,27 @@
                                     android:layout_gravity="center"
                                     android:orientation="vertical">
 
-                                    <ImageView
+<!--                                    <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/business" />
+                                        android:src="@drawable/business" />-->
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kalpurush"
+                                        android:gravity="center"
+                                        android:text="ব্যবসা বাণিজ্য\nপিডিএফ"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
 
                                 </LinearLayout>
 
                             </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="ব্যবসা বাণিজ্য\nপিডিএফ"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+
 
                         </LinearLayout>
 
@@ -422,27 +432,30 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+
                                     android:orientation="vertical">
 
-                                    <ImageView
+<!--                                    <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/drone" />
+                                        android:src="@drawable/drone" />-->
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/kalpurush"
+                                        android:gravity="center"
+                                        android:text="কৃষি উপকরণ পিডিএফ"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
 
                                 </LinearLayout>
 
                             </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/kalpurush"
-                                android:gravity="center"
-                                android:text="কৃষি উপকরণ ও\nআধুনিক প্রযুক্তি পিডিএফ"
-                                android:textAllCaps="false"
-                                android:textColor="@color/black"
-                                android:textSize="13sp"
-                                android:textStyle="bold" />
+
 
                         </LinearLayout>
 
@@ -477,27 +490,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_margin="5dp"
                                 android:orientation="vertical">
 
-                                <ImageView
+<!--                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/success" />
+                                    android:src="@drawable/success" />-->
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="সাফল্য\nগাথা পিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="সফলদের সাফল্য\nগাথা পিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -521,27 +537,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:layout_margin="5dp"
                                 android:orientation="vertical">
 
-                                <ImageView
+<!--                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/planting" />
+                                    android:src="@drawable/planting" />-->
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="কৃষি ও পরিবেশ প্রতিবেদন পিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="কৃষি ও পরিবেশ\nবিষয়ক প্রতিবেদন পিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 
@@ -566,25 +585,27 @@
                                 android:layout_gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
+<!--                                <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/another" />
+                                    android:src="@drawable/another" />-->
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/kalpurush"
+                                    android:gravity="center"
+                                    android:text="ভিন্ন খবর\nপিডিএফ"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
 
                             </LinearLayout>
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/kalpurush"
-                            android:gravity="center"
-                            android:text="ভিন্ন খবর\nপিডিএফ"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+
 
                     </LinearLayout>
 

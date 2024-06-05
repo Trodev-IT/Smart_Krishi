@@ -43,16 +43,8 @@ public class HomeFragment extends Fragment {
     CardView farmer, fish, cow, hen, health, business, technology, success, environment, anothernews ;
     DatabaseReference reference;
 
-    int[] images = {R.drawable.bg_img_01,
-            R.drawable.bg_img_02,
-            R.drawable.bg_img_03,
-            R.drawable.bg_img_04,
-            R.drawable.bg_img_05,
-            R.drawable.bg_img_06,
-            R.drawable.bg_img_07,
-            R.drawable.bg_img_08,
-            R.drawable.bg_img_09,
-            R.drawable.bg_img_10,
+    int[] images = {R.drawable.gp,
+            R.drawable.gp_two,
     };
     public HomeFragment() {
         // Required empty public constructor
